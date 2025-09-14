@@ -1,0 +1,331 @@
+.titleInputs {
+    width: 95%;
+    gap: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgb(221, 214, 255);
+    align-items: flex-start !important;
+
+}
+
+.titleInputs>h1 {
+    margin: 0;
+    padding: 0 10px;
+    color: rgb(221, 220, 255);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.titleInputs:hover:hover>h1 {
+    color: rgb(174, 171, 255);
+}
+
+.titleInputs>.maininps {
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.titleInputs>.maininps>.taskName {
+    flex: .3 .3 200px;
+    height: 80px;
+    max-width: 400px;
+}
+
+.titleInputs>.maininps>.purpusInp {
+    flex: .8 .8 350px;
+    height: 80px;
+    max-width: 600px;
+}
+
+/* _______________________________________________________________task time ____________ */
+.titleInputs>.maininps>.dayinp {
+    text-align: center;
+    width: 42px;
+    padding: 8px;
+    border: none;
+    font-size: inherit;
+    border-bottom: 1px solid rgb(131, 131, 131);
+    outline: none;
+
+}
+
+.titleInputs>.maininps>.daystext {
+    margin: 0;
+    color: rgb(39, 39, 39);
+    font-size: 20px;
+}
+
+.titleInputs>.secH {
+    color: rgb(247, 220, 255);
+}
+
+.titleInputs:hover:hover>.secH {
+    color: rgb(237, 171, 255);
+}
+
+/* ________________________________task tevel___________________________________ */
+
+.titleInputs>.maininps>.levelinp {
+    width: 100%;
+    margin: 10px 0;
+    max-width: 700px;
+}
+
+.titleInputs>.thiH {
+    color: rgb(255, 220, 220);
+}
+
+.titleInputs:hover:hover>.thiH {
+    color: rgb(255, 171, 196);
+}
+
+.titleInputs>.maininps>.miniTitle {
+    color: grey;
+    font-size: 20px;
+}
+
+.titleInputs>.rowinmaininp {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titleInputs>.rowinmaininp>.radioinpdiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+}
+
+.titleInputs>.rowinmaininp>.radioinpdiv>.miniTitle {
+    margin: 10px 30px 10px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(190, 210, 255)
+}
+
+.titleInputs>.rowinmaininp>.radioinpdiv>label {
+    margin: 0 20px 0 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.titleInputs>.rowinmaininp>.radioinpdiv>label:hover {
+    color: rgb(132, 132, 132)
+}
+
+
+/* ______________________________________Description ____________________ */
+
+.titleInputs>.forH {
+    color: rgb(220, 255, 235);
+}
+
+.titleInputs:hover:hover>.forH {
+    color: rgb(171, 255, 226);
+}
+
+.textareainp {
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+    resize: none;
+    height: 92px;
+    outline: none;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+}
+
+/* ______________________________________voice inputs____________________ */
+
+.titleInputs>.fivH {
+    color: rgb(220, 227, 255);
+}
+
+.titleInputs:hover:hover>.fivH {
+    color: rgb(171, 182, 255);
+}
+
+
+
+.maininps>.strtrec {
+    cursor: pointer;
+    width: 50px;
+    box-sizing: border-box;
+    padding: 12px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: rgb(27, 27, 27);
+    fill: rgb(236, 236, 236);
+}
+
+.maininps>.strtrec:hover {
+    background-color: rgb(0, 60, 13);
+}
+
+.maininps>.mikediv {
+    cursor: pointer;
+    height: 50px;
+    min-width: 110px;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: rgb(255, 228, 228);
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 30px;
+}
+
+.maininps>.mikediv>.stprec {
+    fill: rgb(255, 0, 0);
+    width: 25px;
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    animation: blink 1s infinite forwards ease;
+}
+
+.maininps>.mikediv:hover {
+    fill: rgb(255, 0, 0);
+    background-color: rgb(255, 200, 200);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.maininps>.mikediv>p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: red;
+}
+
+.maininps>.canvasdiv {
+    border-radius: 30px;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid rgb(88, 88, 88)
+}
+
+.maininps>.canvasdiv>.plpu {
+    cursor: pointer;
+    width: 40px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: 8px;
+    aspect-ratio: 1/1;
+    background-color: rgb(49, 49, 49);
+}
+
+.maininps>.canvasdiv>.plpu:hover {
+    opacity: .6;
+}
+
+.gapinvoice {
+    padding: 20px 0;
+}
+
+/* ____________________________________image input ______________________________________________ */
+
+.titleInputs>.sixH {
+    color: rgba(180, 202, 139, 0.499);
+}
+
+.titleInputs:hover:hover>.sixH {
+    color: rgba(102, 114, 79, 0.524);
+}
+
+.maininps>.imgdiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+}
+
+.maininps>.imgdiv>.onediv {
+    position: relative;
+    width: 22%;
+    aspect-ratio: 1.5/1;
+
+}
+
+.maininps>.imgdiv>.onediv>.cutimg {
+    position: absolute;
+    width: 25px;
+    aspect-ratio: 1/1;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    transform: translate(25%, -25%);
+    fill: rgb(40, 40, 40);
+    cursor: pointer;
+}
+
+.maininps>.imgdiv>.onediv>.cutimg:hover {
+    fill: rgb(255, 0, 0);
+}
+
+.maininps>.imgdiv>.onediv>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+
+}
+
+.maininps>.importImg {
+    cursor: pointer;
+    transition: .2s ease;
+    padding: 10px 20px 10px 10px;
+    border: 1px solid rgb(220, 220, 220);
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-radius: 80px;
+}
+
+.maininps>.importImg:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.maininps>.importImg>.downl {
+    background-color: rgb(47, 47, 47);
+    border-radius: 50%;
+    padding: 8px;
+    width: 23px;
+    aspect-ratio: 1/1;
+}
+
+.maininps>.importImg>p {
+    margin: 0;
+    white-space: nowrap;
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+}
+
+/* ___________________________button ______________________ */
+.btndivinput {
+    margin:20px 20px 40px 20px;
+    align-self: flex-end;
+}

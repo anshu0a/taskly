@@ -1,0 +1,27 @@
+.addTaskDiv {
+    flex-direction: row !important;
+    transition: .2s ease;
+    cursor: pointer;
+    padding: 10px 13px;
+    background-color: rgb(96, 23, 255);
+    border-radius: 30px;
+    gap: 5px;
+}
+.addTaskDiv:hover {
+    box-shadow: 0 0px 4px 4px rgba(3, 3, 3, 0.095);
+}
+.addTaskDiv>.addIcn {
+    width: 25px;
+    aspect-ratio: 1/1;
+
+
+}
+.addTaskDiv>p {
+    color:white;
+    user-select: none;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+}

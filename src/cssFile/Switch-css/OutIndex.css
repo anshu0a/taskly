@@ -1,0 +1,24 @@
+.outIndex{
+        display:flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap:4px;
+        width:100%;
+    }
+
+/* ________________________________________  mobile  _____________________________________________ */
+
+@media (max-width:1000px) {
+    .outIndex{
+       align-items: center;
+    }
+}
+
+@media (max-width:630px) {
+    .outIndex{
+        flex-direction: row;
+        width:auto;
+         justify-content: center;
+    }
+}

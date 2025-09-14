@@ -1,0 +1,61 @@
+.overSwitch>.actContent>.top>.hometop {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.overSwitch>.actContent>.top>.hometop {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 2px 20px;
+    font-weight: 600;
+}
+
+.overSwitch>.actContent>.top>.hometop>p {
+    width: calc(100% - 50px);
+    margin:0;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+    font-size: 18px;
+}
+.overSwitch>.actContent>.top>.hometop>.topinfo{
+ width: calc(100% - 120px);
+}
+.overSwitch>.actContent>.top>.hometop>p>span {
+    font-size: 14px;
+    color: rgba(0, 22, 41, 0.354);
+    font-style: italic;
+}
+
+.overSwitch>.actContent>.mainBody>.outhome {
+    position: relative;
+    gap:10px;
+    padding:10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.overSwitch>.actContent>.mainBody>.outhome>.allopt{
+    position: sticky;
+    top:10px;
+    width:100%;
+    flex-direction: row;
+    gap:30px;
+}
+.overSwitch>.actContent>.mainBody>.outhome>.allopt>.opt12{
+    background-color: rgba(231, 242, 255, 0.8);
+    font-weight: 600;
+    color:rgb(115, 115, 115);
+    padding:8px 15px;
+    border-radius: 20px;
+
+}
+.overSwitch>.actContent>.mainBody>.outhome>.allopt>.inopt{
+    color:blue;
+}
+
+.overSwitch>.actContent>.mainBody>.outhome>.mainpart{
+    width:100%;
+}

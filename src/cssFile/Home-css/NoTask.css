@@ -1,0 +1,13 @@
+.notask{
+    width:100%;
+    height:100%;
+}
+
+.notask>.notaskImg{
+    width:90%;
+    max-width: 400px;
+    object-fit: cover;
+}
+.notask>h2{
+    color:rgb(68, 0, 255);
+}

@@ -1,0 +1,18 @@
+.plzgoback{
+    transition: .2s ease;
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+    width:30px;
+    border-radius: 50%;
+    padding:7px
+}
+.plzgoback:hover{
+    background-color: rgb(217, 217, 217);
+}
+.plzgoback>path{
+        transition: .2s ease;
+    fill:rgb(72, 0, 255)
+}
+.plzgoback:hover>path{
+    fill:rgb(140, 0, 255)
+}

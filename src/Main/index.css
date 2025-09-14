@@ -1,0 +1,29 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+
+body {
+  margin: 0;
+}
+
+body::selection {
+  background-color: rgba(0, 0, 0, 0.68);
+  color: white
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.isFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  user-select: none;
+}

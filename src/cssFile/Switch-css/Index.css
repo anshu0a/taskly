@@ -1,0 +1,85 @@
+.index,
+.index>.outnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.index {
+    transition: .2s ease;
+    flex-direction: row;
+    width: calc(100% - 60px);
+    margin: 0 10px;
+    padding: 14px 20px;
+    justify-content: flex-start;
+    background-color: rgba(123, 123, 123, 0);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.index:hover {
+    background-color: rgba(0, 0, 0, 0.094);
+}
+
+.index>.outnav {
+    transition: .1s ease;
+    scale: .9;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.index>.outnav path {
+    fill: rgb(39, 39, 39);
+    
+}
+.index:hover>.outnav path {
+     fill: rgb(56, 0, 0);
+}
+.index:hover>.outnav {
+    scale: 1;
+}
+
+.index>.outnav>.navicon {
+    width: 35px;
+    aspect-ratio: 1/1;
+
+}
+
+.index>.outnav>.navtext {
+    color: rgb(39, 39, 39);
+    font-size: 22px;
+    margin: 0;
+}
+
+.index:hover>.outnav>.navtext {
+    color: rgb(56, 0, 0);
+    font-weight: 500;
+}
+
+
+/* ______________________________________________________________________ */
+@media (max-width:1000px) {
+    .index>.outnav>.navtext {
+        display: none;
+    }
+
+    .index {
+        width: auto;
+        max-width: calc(100% - 40px);
+        padding: 10px;
+        aspect-ratio: 1/1;
+    }
+}
+
+@media (max-width:630px) {
+    .index>.outnav>.navtext {
+        display: none;
+
+    }
+
+    .index:hover {
+        background-color: transparent;
+    }
+}

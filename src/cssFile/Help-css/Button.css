@@ -1,0 +1,12 @@
+.unibtn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    user-select: none;
+}
+
+.unibtn:hover {
+    opacity: .7;
+}
