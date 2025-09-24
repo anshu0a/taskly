@@ -51,7 +51,7 @@ export default function createform() {
         try {
             setWait((pre) => ({ ...pre, isload: true, loading: 'Uploading your information...', quick: '', alert: "", error: false }));
 
-            const response = await fetch("/https://tasklyserver-0ux1.onrender.com/api/registerUser", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/registerUser`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

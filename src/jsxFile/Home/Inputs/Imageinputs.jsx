@@ -4,9 +4,8 @@ import '../../../cssFile/Home-css/AddingOneTask.css';
 export default function ImageInput({ value, setvalue }) {
 
     const handleImageChange = (e) => {
-        const files = Array.from(e.target.files).slice(0, 4); // max 4 images
+        const files = Array.from(e.target.files).slice(0, 4); 
 
-        // keep file objects + preview urls
         const imageFiles = files.map(file => ({
             file,
             preview: URL.createObjectURL(file),

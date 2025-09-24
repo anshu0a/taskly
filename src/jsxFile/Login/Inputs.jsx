@@ -25,7 +25,7 @@ export default function MainLogin() {
     try {
       setWait((pre) => ({ ...pre, isload: true, msg: "We are just checking...", quick: "", error: false, }));
 
-      const response = await fetch("/https://tasklyserver-0ux1.onrender.com/api/login", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -54,7 +54,7 @@ export default function namecreate({ value, setValue, wait, setWait, submitname 
                 setWait(pre => ({ ...pre, alert: "Almost there, add a few more letters", error: true }));
                 return;
             }
-            const response = await fetch("/https://tasklyserver-0ux1.onrender.com/api/isuserexist", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/isuserexist`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

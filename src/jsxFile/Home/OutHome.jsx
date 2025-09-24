@@ -16,7 +16,9 @@ export default function outHome({ myFeed, }) {
         async function userRegister() {
             try {
                 setIsloading((pre) => ({ ...pre, is: true }));
-                const response = await fetch(myFeed ? "/https://tasklyserver-0ux1.onrender.com/api/myAllTasks" : "/https://tasklyserver-0ux1.onrender.com/api/otherAllTasks", {
+                const response = await fetch(myFeed
+                    ? `${import.meta.env.VITE_API_URL}/api/myAllTasks`
+                    : `${import.meta.env.VITE_API_URL}/api/otherAllTasks`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -32,14 +34,14 @@ export default function outHome({ myFeed, }) {
                     setData(data.data);
                     setUser(data.user);
                     setIsloading((pre) => ({ ...pre, is: false }));
-                    console.log("Data from server in home :", data);
+                    console.log("Data from server in home coming");
                 } else {
-                    setIsloading((pre) => ({ ...pre, msg: data.message + ' %-+% ' + Date.now()  + Date.now()  }));
+                    setIsloading((pre) => ({ ...pre, msg: data.message + ' %-+% ' + Date.now() + Date.now() }));
                 }
 
-                
+
             } catch (err) {
-                console.log("Error from server:", err);
+                console.log("Error from server at home :", err);
             }
         }
 

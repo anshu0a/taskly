@@ -41,7 +41,7 @@ export default function Timer({ taskId, setAct }) {
   async function addOneMinute() {
     try {
       console.log("timr send");
-      const response = await fetch(`/https://tasklyserver-0ux1.onrender.com/api/addOneMinut/${taskId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/addOneMinut/${taskId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

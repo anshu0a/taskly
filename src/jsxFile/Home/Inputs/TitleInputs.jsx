@@ -37,7 +37,7 @@ export default function titleInputs({ value, setvalue }) {
     async function taskExist(value) {
         console.log("hello to text check")
         try {
-            const response = await fetch("/https://tasklyserver-0ux1.onrender.com/api/isTaskExist", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/isTaskExist`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

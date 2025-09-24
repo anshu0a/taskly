@@ -30,7 +30,7 @@ export default function OptionLogin() {
     if (popupRef.current && !popupRef.current.closed) {
       popupRef.current.close();
     }
-    popupRef.current = window.open("/https://tasklyserver-0ux1.onrender.com/api/auth/google", "googleLogin" + Date.now(), "width=1000,height=600");
+    popupRef.current = window.open(`${import.meta.env.VITE_API_URL}/api/auth/google`, "googleLogin" + Date.now(), "width=1000,height=600");
     if (!popupRef.current) {
       setWait(prev => ({ ...prev, isload: false, quick: "Popup blocked! Allow popups.%-+%" + Date.now(), error: true }));
     }
