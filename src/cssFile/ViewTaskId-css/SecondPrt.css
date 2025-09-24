@@ -1,0 +1,81 @@
+.secondprtview {
+    color: rgb(60, 60, 60);
+    width: 100%;
+    gap: 10px;
+}
+
+.secondprtview>.addedAt {
+    align-self: flex-start;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.secondprtview>.updateview {
+    box-sizing: border-box;
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+}
+
+.secondprtview>.updateview>div {
+    display: flex;
+    gap: 3px;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(251, 248, 255);
+    color: rgb(31, 31, 31);
+    padding: 5px 10px 5px 5px;
+    border-radius: 5px;
+}
+
+.secondprtview>.updateview>div>svg {
+    width: 22px;
+}
+
+.secondprtview>.updateview>div>svg>path {
+    fill: rgb(45, 45, 45);
+}
+
+.secondprtview>.updateview>div>p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+
+}
+
+.secondprtview>.descviewtask {
+    width: calc(100% - 10px);
+    margin: 0 5px;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 10px;
+    font-size: 13px;
+    background: rgb(243, 243, 243);
+    border-radius: 10px;
+    border: 4px solid rgb(243, 243, 243);
+    color: rgb(62, 62, 62);
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: scroll;
+
+}
+
+.secondprtview>.descviewtask::selection {
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
+}
+
+.secondprtview>.descviewtask::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(38, 38, 38, 0);
+}
+
+.secondprtview>.descviewtask::-webkit-scrollbar-thumb {
+    background: rgb(27, 27, 27);
+    border-radius: 10px;
+}

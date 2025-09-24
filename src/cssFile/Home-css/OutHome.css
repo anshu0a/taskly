@@ -10,52 +10,79 @@
     width: 100%;
     height: 100%;
     padding: 2px 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .overSwitch>.actContent>.top>.hometop>p {
     width: calc(100% - 50px);
-    margin:0;
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
-    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+
 }
-.overSwitch>.actContent>.top>.hometop>.topinfo{
- width: calc(100% - 120px);
+
+.overSwitch>.actContent>.top>.hometop>.topinfo {
+    width: calc(100% - 105px);
 }
+
 .overSwitch>.actContent>.top>.hometop>p>span {
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(0, 22, 41, 0.354);
     font-style: italic;
 }
 
 .overSwitch>.actContent>.mainBody>.outhome {
     position: relative;
-    gap:10px;
-    padding:10px;
     box-sizing: border-box;
     width: 100%;
+    gap:5px;
+    padding:10px 0;
 }
-.overSwitch>.actContent>.mainBody>.outhome>.allopt{
+.overSwitch>.actContent>.mainBody>.outhome>.morelessinps{
+    cursor: pointer;
+    user-select: none;
+    align-self: flex-start;
+    margin:5px 20px;
+    font-size: 12px;
+    padding:5px 10px;
+    color:rgb(195, 195, 195);
+    border-radius: 10px;
+    
+}
+.overSwitch>.actContent>.mainBody>.outhome>.morelessinps:hover{
+    background-color: rgb(243, 243, 243);
+    color:rgb(91, 91, 91);
+}
+.overSwitch>.actContent>.mainBody>.outhome>.allopt {
     position: sticky;
-    top:10px;
-    width:100%;
+    z-index: 1;
+    top: 10px;
+    width: 100%;
     flex-direction: row;
-    gap:30px;
+    gap: 30px;
 }
-.overSwitch>.actContent>.mainBody>.outhome>.allopt>.opt12{
+
+.overSwitch>.actContent>.mainBody>.outhome>.allopt>.opt12 {
     background-color: rgba(231, 242, 255, 0.8);
-    font-weight: 600;
-    color:rgb(115, 115, 115);
-    padding:8px 15px;
+    font-weight: 500;
+    color: rgb(115, 115, 115);
+    padding: 8px 15px;
     border-radius: 20px;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
 
 }
-.overSwitch>.actContent>.mainBody>.outhome>.allopt>.inopt{
-    color:blue;
+.overSwitch>.actContent>.mainBody>.outhome>.allopt>.opt12:hover{
+background-color: rgba(187, 218, 255, 0.807);
 }
 
-.overSwitch>.actContent>.mainBody>.outhome>.mainpart{
-    width:100%;
+.overSwitch>.actContent>.mainBody>.outhome>.allopt>.inopt {
+    color: blue;
+}
+
+.overSwitch>.actContent>.mainBody>.outhome>.mainpart {
+    width: 100%;
 }

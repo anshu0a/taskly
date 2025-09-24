@@ -1,0 +1,18 @@
+.showalertcreate{
+width:100%;
+flex-direction: row !important;
+justify-content: flex-start !important;
+gap:4px
+}
+.showalertcreate>svg{
+width:24px;
+}
+.showalertcreate>p{
+    user-select: none;
+    width:calc(100% - 28x);
+    margin: 0%;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

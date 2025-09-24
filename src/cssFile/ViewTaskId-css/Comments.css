@@ -1,0 +1,133 @@
+.commentsview {
+    width: 100%;
+    color: rgb(52, 52, 52);
+    position: relative;
+    padding: 20px 0;
+}
+
+.commentsview>.inpview {
+
+    padding: 4px 3px 4px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: 96%;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 40px;
+
+}
+
+.commentsview>.inpview>input {
+    border-radius: 10px;
+    color: rgb(45, 45, 45);
+    background-color: rgba(0, 0, 0, 0);
+    margin: 8px 0;
+    padding: 4px 0 2px 4px;
+    width: calc(100% - 51px);
+    border: none;
+    outline: none;
+    font-size: inherit;
+}
+
+.commentsview>.inpview>svg {
+    cursor: pointer;
+    width: 35px;
+    aspect-ratio: 1/1;
+    ;
+    fill: rgb(0, 98, 255);
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.commentsview>.inpview>svg:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.commentsview>.inpview>.lod {
+    animation: roudn 1s infinite forwards steps(8);
+    transform: rotate(0deg);
+}
+
+@keyframes roudn {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.commentsview>.allcmts {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.commentsview>.allcmts>.onecmt {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    gap: 8px;
+}
+
+.commentsview>.allcmts>.onecmt>.picview {
+    width: 38px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.commentsview>.allcmts>.onecmt>.textview {
+    width: calc(100% - 43px);
+}
+
+.commentsview>.allcmts>.onecmt>.textview>.userdtnview {
+    justify-content: space-between;
+    flex-direction: row !important;
+    width: 100%;
+    gap:5px;
+}
+
+.commentsview>.allcmts>.onecmt>.textview>.userdtnview>p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color:rgb(53, 53, 53);
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.commentsview>.allcmts>.onecmt>.textview>.userdtnview>p+p {
+    width:30%;
+    text-align: end;
+    font-size: 10px;
+     font-weight: 400;
+    color: rgb(208, 208, 208);
+}
+.commentsview>.allcmts>.onecmt>.textview>.userdtnview>.del{
+    width:25px;
+    cursor: pointer;
+    aspect-ratio: 1/1.1;
+    fill:red;
+    border-radius: 5px;
+}
+.commentsview>.allcmts>.onecmt>.textview>.userdtnview>.del:hover{
+    background-color: rgb(56, 32, 0);
+    fill:white;
+    background-color: red ;
+}
+.commentsview>.allcmts>.onecmt>.textview>.cmtview {
+    width: 96%;
+    font-size: 15px;
+}
+

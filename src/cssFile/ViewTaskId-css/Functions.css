@@ -1,0 +1,49 @@
+.functionsviewx {
+    flex-direction: row;
+    gap: 10px;
+    display: flex;
+    padding: 15px 0;
+    color: rgb(45, 45, 45);
+    width: 99%;
+    flex-wrap: wrap;
+
+}
+
+.functionsviewx>.bdrbxview {
+    width: 100%;
+    flex: 1 1 400px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgb(199, 231, 255);
+    gap: 5px;
+}
+
+.functionsviewx>.btnview1 {
+    border: 1px solid rgb(255, 210, 210);
+}
+
+.functionsviewx>.bdrbxview>h2 {
+    color: rgb(0, 115, 255);
+    margin: 0;
+    width: 100%;
+}
+
+.functionsviewx>.btnview1>h2 {
+    color: rgb(255, 0, 0);
+}
+
+.functionsviewx>.bdrbxview>p {
+    color: rgb(164, 223, 255);
+    margin: 0;
+    width: 100%;
+    font-size: 13px;
+}
+
+.functionsviewx>.btnview1>p {
+    color: rgb(255, 161, 161);
+}
+
+.functionsviewx>.bdrbxview>.btddivview {
+    align-self: flex-start;
+}

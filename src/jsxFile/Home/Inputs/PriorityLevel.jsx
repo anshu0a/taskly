@@ -1,21 +1,27 @@
 import '../../../cssFile/Home-css/AddingONeTask.css'
 import Slider from '@mui/material/Slider';
 
-export default function levelInputs() {
+export default function levelInputs({ value, setvalue }) {
+    function setPriority(e) {
+        const { name, value: val } = e.target;
+        setvalue((pre) => ({ ...pre, [name]: val }))
+    }
     return (
         <div className="maininps  rowinmaininp isFlex">
             <Slider
+                name='priority'
+                onChange={setPriority}
                 className='levelinp'
                 size="small"
-                defaultValue={75}
+                value={value.priority}
                 aria-label="Small"
                 valueLabelDisplay="auto"
             />
             <div className='radioinpdiv'>
                 <p className='miniTitle'>Task Type </p>
-                <input id="pri" name="access" defaultChecked value="private" type="radio"></input>
+                <input onChange={setPriority} id="pri" name="type" defaultChecked value="personal" type="radio"></input>
                 <label htmlFor='pri'>Presonal</label>
-                <input id="pub" name="access"  value="public" type="radio"></input>
+                <input onChange={setPriority} id="pub" name="type" value="public" type="radio"></input>
                 <label htmlFor='pub'>Public</label>
 
             </div>

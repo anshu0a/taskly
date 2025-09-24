@@ -1,0 +1,46 @@
+
+.timerdiv {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 50%;
+  margin:35px 0 50px 0;
+  border: 1px dotted #929292;
+}
+
+.timerdiv>.redbtntmer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.359);
+  transform: translate(-50%, -50%) rotate(0deg) translateX(100px);
+}
+
+.timerdiv>.runtimerdiv {
+  animation: orbit 60s linear infinite;
+}
+
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(100px);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100px);
+  }
+}
+
+
+
+
+.timerfun {
+  width: 300px;
+  padding: 5px;
+  background-color: antiquewhite;
+}

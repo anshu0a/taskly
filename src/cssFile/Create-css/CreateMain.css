@@ -1,0 +1,83 @@
+.maincreate {
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row !important;
+    gap: 5px;
+    overflow: hidden;
+    background: linear-gradient(rgb(255, 255, 255), rgb(184, 184, 184))
+}
+
+.maincreate>.logiccreate {
+    width: 60%;
+}
+
+/* ________________________________create form ____________ */
+
+.maincreate>.logiccreate>.formcreate {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    width: 100%;
+    gap: 20px;
+}
+
+.maincreate>.logiccreate>.formcreate>img {
+    width: 90%;
+    max-width: 180px;
+    padding-bottom: 30px;
+}
+
+.maincreate>.logiccreate>.formcreate>.createbtndiv {
+    width: 100%;
+    justify-content: flex-end !important;
+    flex-direction: row !important;
+    gap: 5px;
+    max-width: 700px;
+}
+
+.maincreate>.logiccreate>.formcreate>.anmisuccess {
+    user-select: none;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.maincreate>.logiccreate>.formcreate>.anmisuccess>h1 {
+    color: rgb(0, 111, 163);
+    margin:0;
+}
+
+/* _______________________________________________ */
+.maincreate>.anmiCreate {
+    box-sizing: border-box;
+    padding: 10px;
+    width: calc(40% - 10px);
+}
+
+.maincreate>.anmiCreate>.createtitle {
+    color: rgb(0, 115, 255);
+    font-size: 30px;
+}
+
+.maincreate>.anmiCreate>.createmsg {
+    text-align: center;
+    color: rgb(0, 48, 108);
+    font-size: 18px;
+}
+
+.maincreate>.anmiCreate>.createmsg>span {
+    color: rgb(0, 115, 255);
+    font-weight: 500;
+}
+
+/* _________________________________________mobie / tab___________________________ */
+
+@media (max-width:1300px) {
+    .maincreate>.logiccreate {
+        width: 100%;
+
+    }
+
+    .maincreate>.anmiCreate {
+        display: none
+    }
+}

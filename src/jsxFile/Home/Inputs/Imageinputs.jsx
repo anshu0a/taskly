@@ -1,28 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../../cssFile/Home-css/AddingONeTask.css';
 
-export default function ImageInput() {
-    const [images, setImages] = useState([]);
+export default function ImageInput({ value, setvalue }) {
 
     const handleImageChange = (e) => {
-        const files = Array.from(e.target.files).slice(0, 4); // take max 4 images
-        const imageUrls = files.map(file => URL.createObjectURL(file));
-        setImages(imageUrls);
+        const files = Array.from(e.target.files).slice(0, 4); // max 4 images
+
+        // keep file objects + preview urls
+        const imageFiles = files.map(file => ({
+            file,
+            preview: URL.createObjectURL(file),
+        }));
+
+        setvalue((pre) => ({
+            ...pre,
+            images: [...(pre.images || []), ...imageFiles]
+        }));
     };
+
     function cutImg(ind) {
-        setImages(prev => prev.filter((_, index) => index !== ind));
+        setvalue((pre) => ({
+            ...pre,
+            images: pre.images.filter((_, index) => index !== ind)
+        }));
     }
 
     return (
         <div className="maininps isFlex" style={{ gap: '10px' }}>
-            <div className='imgdiv' >
-                {images.map((img, index) => (
-                    <div className="onediv">
-
-                        <img
-                            key={index}
-                            src={img}
-                        />
+            <div className='imgdiv'>
+                {value.images?.map((imgObj, index) => (
+                    <div key={index} className="onediv">
+                        <img src={imgObj.preview} alt="preview" />
                         <svg onClick={() => cutImg(index)} className='cutimg' viewBox="0 0 24 24">
                             <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm3.71,12.29a1,1,0,0,1,0,1.42,1,1,0,0,1-1.42,0L12,13.42,9.71,15.71a1,1,0,0,1-1.42,0,1,1,0,0,1,0-1.42L10.58,12,8.29,9.71A1,1,0,0,1,9.71,8.29L12,10.58l2.29-2.29a1,1,0,0,1,1.42,1.42L13.42,12Z"></path>
                         </svg>
@@ -30,8 +38,9 @@ export default function ImageInput() {
                 ))}
             </div>
 
-            <input id="inpimg"
-            hidden
+            <input
+                id="inpimg"
+                hidden
                 type="file"
                 accept="image/*"
                 multiple

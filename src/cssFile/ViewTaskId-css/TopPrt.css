@@ -1,0 +1,105 @@
+
+.viewTask>.uppderdivView {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+.viewTask>.uppderdivView>.thisImgView {
+    transition: .4s ease;
+    width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.viewTask>.uppderdivView>.hidefadeview{
+    opacity: .1;
+}
+.viewTask>.uppderdivView>.userview {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+}
+
+.viewTask>.uppderdivView>.userview>.oneprtview {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.viewTask>.uppderdivView>.userview>.oneprtview>.thisispic {
+    border-radius: 50%;
+    width: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.viewTask>.uppderdivView>.userview>.oneprtview>.namedivview {
+    align-items: flex-start !important;
+    width: calc(100% - 58px);
+}
+
+.viewTask>.uppderdivView>.userview>.oneprtview>.namedivview>p {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.viewTask>.uppderdivView>.userview>.oneprtview>.namedivview>.usernm {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.viewTask>.uppderdivView>.userview>.oneprtview>.namedivview>.nm {
+    color: rgb(230, 230, 230);
+    font-size: 12px;
+}
+
+.viewTask>.uppderdivView>.userview>.twoprtview {
+    width: 100%;
+    align-items: flex-end !important;
+    align-self: flex-end;
+    text-align: end;
+    gap: 5px;
+}
+
+.viewTask>.uppderdivView>.userview>.twoprtview>p {
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.viewTask>.uppderdivView>.userview>.twoprtview>p+p {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    margin: 0;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tymcreatedview{
+    margin:0;
+    font-size: 12px;
+    color:rgb(161, 161, 161)
+}

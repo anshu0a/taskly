@@ -1,0 +1,53 @@
+/* <div className='Verifyermsg'>
+        <div className='mainverifyer'>
+            <input onChange={(e) => setvalue((pre) => ({ ...pre, input: e.target.value }))} value={value.input} type="text" autoComplete='false'></input>
+        </div>
+    </div> */
+.Verifyermsg {
+    position: fixed;
+    
+    top: 0;
+    left:0;
+    z-index: 2;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.537);
+}
+
+.Verifyermsg>.mainverifyer {
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px 40px;
+    background-color: aliceblue;
+    gap:15px;
+    max-width: 450px;
+    width:95%;
+}
+.Verifyermsg>.mainverifyer>p{
+    text-align: center;
+    color:grey;
+    user-select: none;
+}
+.Verifyermsg>.mainverifyer>p>span{
+    color:red;
+    user-select: text;
+}
+.Verifyermsg>.mainverifyer>p>span::selection{
+    background-color: red;
+}
+.Verifyermsg>.mainverifyer>.btndivVerify{
+    display:flex;
+    flex-direction: row;
+    gap:5px;
+}
+.Verifyermsg>.mainverifyer>input{
+    letter-spacing: .5px;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgb(203, 203, 203);
+    padding:10px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    color:rgb(43, 43, 43)
+}

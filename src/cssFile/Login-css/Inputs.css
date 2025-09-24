@@ -1,0 +1,38 @@
+.logininpdiv {
+    align-items: flex-start !important;
+    position: relative;
+    width: calc(90% - 20px);
+    padding: 0 10px;
+    margin: 5px;
+    max-width: 600px;
+    border-radius: 20px;
+    gap: 15px;
+
+}
+
+.logininpdiv>.logininp {
+    outline: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    width: calc(100% - 2px);
+    padding: 10px 20px;
+    font-size: 14px;
+    color: rgb(238, 238, 238);
+    border: none;
+    letter-spacing: 1.1px;
+    border-bottom: 1px solid rgb(56, 56, 56);
+}
+
+.logininpdiv>label {
+    user-select: none;
+    color: rgb(178, 178, 178);
+    font-size: 16px;
+}
+
+.btndivlogin {
+    max-width: 100%;
+    margin: 10px 0;
+}
+.btndivlogin >.okbtnis{
+height:38px;
+}

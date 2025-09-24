@@ -1,9 +1,10 @@
 import '../../cssFile/Help-css/Button.css'
-export default function Bbutton({ msg, fn, typ }) {
+export default function Bbutton({ msg, fn, typ ,off}) {
     return (
         <div 
-        onClick={() => fn()} 
-        className="unibtn"
+        disabled
+        onClick={() => !off && fn()}
+        className="unibtn isFlex"
         style={
             typ == 1 ? 
             {backgroundColor:"rgb(59, 59, 59)"}:

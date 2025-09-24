@@ -1,0 +1,35 @@
+.quickmsg {
+    border-radius: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 1;
+    bottom: 10vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    max-width: 95vw;
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 43, 43);
+    cursor: no-drop;
+    user-select: none;
+    animation: quickmsgblur 0.5s ease forwards; 
+}
+
+
+
+.quickmsg>p {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    font-size: 12px;
+}
+
+@keyframes quickmsgblur {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
