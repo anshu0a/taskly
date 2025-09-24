@@ -10,15 +10,21 @@ export default function OptionLogin() {
 
   useEffect(() => {
     function handleMessage(event) {
-      if (event.origin !== import.meta.env.VITE_API_URL.replace(/\/$/, "")) return;
-
-
+      console.log("comming");
+      const apiUrl = import.meta.env.VITE_API_URL.replace(/\/$/, "");
+      if (event.origin !== apiUrl) return;
+      console.log("passing 1 step");
       const { token, message } = event.data;
       if (token) {
+        console.log("intoken");
         localStorage.setItem("token", token);
         setWait(prev => ({ ...prev, isload: false, quick: message, error: false }));
         window.location.replace('/taskly/private');
+      } else if (message) {
+        console.log("not in token but in msg");
+        setWait(prev => ({ ...prev, isload: false, quick: message, error: true }));
       }
+      console.log("not in every whereg");
     }
 
     window.addEventListener("message", handleMessage);
