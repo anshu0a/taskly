@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../cssFile/Home-css/AddingONeTask.css';
+import '../../../cssFile/Home-css/AddingOneTask.css';
 
 export default function ImageInput({ value, setvalue }) {
 

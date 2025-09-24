@@ -1,4 +1,4 @@
-import '../../../cssFile/Home-css/AddingONeTask.css'
+import '../../../cssFile/Home-css/AddingOneTask.css'
 import Slider from '@mui/material/Slider';
 
 export default function levelInputs({ value, setvalue }) {

@@ -1,4 +1,4 @@
-import '../../../cssFile/Home-css/AddingONeTask.css'
+import '../../../cssFile/Home-css/AddingOneTask.css'
 
 
 export default function timelineinputs({ value, setvalue }) {
