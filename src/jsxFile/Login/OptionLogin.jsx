@@ -10,8 +10,8 @@ export default function OptionLogin() {
 
   useEffect(() => {
     function handleMessage(event) {
-      const apiUrl = import.meta.env.VITE_API_URL.replace(/\/$/, "");
-      if (event.origin !== apiUrl) return;
+      if (event.origin !== import.meta.env.VITE_API_URL) return;
+
       const { token, message } = event.data;
       if (token) {
         localStorage.setItem("token", token);
