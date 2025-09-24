@@ -1,4 +1,4 @@
-import { useState, useEffect ,useRef} from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '../../cssFile/Login-css/Optionlogin.css';
 import Loading from '../Help/Loading';
 import QuickMsg from '../Help/Quickmsg';
@@ -10,7 +10,8 @@ export default function OptionLogin() {
 
   useEffect(() => {
     function handleMessage(event) {
-      if (event.origin !== 'https://tasklyserver-0ux1.onrender.com') return;
+      if (event.origin !== import.meta.env.VITE_API_URL.replace(/\/$/, "")) return;
+
 
       const { token, message } = event.data;
       if (token) {
