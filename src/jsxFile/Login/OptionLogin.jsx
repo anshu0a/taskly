@@ -10,7 +10,7 @@ export default function OptionLogin() {
 
   useEffect(() => {
     function handleMessage(event) {
-      if (event.origin !== 'http://localhost:3000') return;
+      if (event.origin !== 'https://tasklyserver-0ux1.onrender.com') return;
 
       const { token, message } = event.data;
       if (token) {
