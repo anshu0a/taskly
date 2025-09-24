@@ -7,7 +7,7 @@ import NotFound from '../Help/notFound'
 import TopPrt from './TopPrt'
 import SecondPrt from './SecondPrt'
 import Functions from './Functions'
-import Comments from './Comments'
+import Comments from './comments'
 
 
 
