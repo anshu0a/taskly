@@ -34,7 +34,7 @@ export default function addingOneTask({}) {
                 if (imgObj.file) formData.append('images', imgObj.file)
             })
 
-            const data = await fetch('/api/tasks', {
+            const data = await fetch('/https://tasklyserver-0ux1.onrender.com/api/tasks', {
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,

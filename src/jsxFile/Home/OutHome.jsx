@@ -16,7 +16,7 @@ export default function outHome({ myFeed, }) {
         async function userRegister() {
             try {
                 setIsloading((pre) => ({ ...pre, is: true }));
-                const response = await fetch(myFeed ? "/api/myAllTasks" : "/api/otherAllTasks", {
+                const response = await fetch(myFeed ? "/https://tasklyserver-0ux1.onrender.com/api/myAllTasks" : "/https://tasklyserver-0ux1.onrender.com/api/otherAllTasks", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

@@ -11,7 +11,7 @@ export default function comments({ cmt, setAct, user, userId, taskId, my, setMsg
             setMsg((pre) => ({ ...pre, loading: true, }));
             setLod(true)
             const search = localStorage.getItem("type").endsWith('u') ? "public":"personal";
-            const response = await fetch(`/api/removeCmt/${userId}/${taskId}/${cmt._id}/${search}`, {
+            const response = await fetch(`/https://tasklyserver-0ux1.onrender.com/api/removeCmt/${userId}/${taskId}/${cmt._id}/${search}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -15,7 +15,7 @@ export default function functions({ user, taskId, isDone, setAct, title }) {
         try {
             setMsg((pre) => ({ ...pre, loading: true, msg: '',lodmsg:"Marking task" }));
             const search = localStorage.getItem("type").endsWith('u') ? "public" : "personal";
-            const response = await fetch(`/api/markToggle/${taskId}/${search}`, {
+            const response = await fetch(`/https://tasklyserver-0ux1.onrender.com/api/markToggle/${taskId}/${search}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export default function functions({ user, taskId, isDone, setAct, title }) {
             try {
                 setMsg((pre) => ({ ...pre, loading2: true, msg: '',lodmsg:"Killing task." }));
                 const search = localStorage.getItem("type").endsWith('u') ? "public" : "personal";
-                const response = await fetch(`/api/killTask/${taskId}`, {
+                const response = await fetch(`/https://tasklyserver-0ux1.onrender.com/api/killTask/${taskId}`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

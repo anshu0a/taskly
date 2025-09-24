@@ -15,7 +15,7 @@ export default function comments({ act, setAct }) {
             if (my.message == "") return;
             const search = localStorage.getItem("type").endsWith('u') ? "public":"personal";
             setMsg((pre) => ({ ...pre, loading: true, }));
-            const response = await fetch(`/api/addCmt/${search}`, {
+            const response = await fetch(`/https://tasklyserver-0ux1.onrender.com/api/addCmt/${search}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -13,7 +13,7 @@ export default function onetask({ type, data, user, setData, setMsg }) {
 
     async function taskAddKro() {
         try {
-            const res = await fetch(`/api/pullPushTask/${data.task._id}`, {
+            const res = await fetch(`/https://tasklyserver-0ux1.onrender.com/api/pullPushTask/${data.task._id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

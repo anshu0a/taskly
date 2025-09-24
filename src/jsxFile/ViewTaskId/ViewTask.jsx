@@ -19,7 +19,7 @@ export default function viewtask() {
         async function gettask() {
             try {
                 const search = localStorage.getItem("type").endsWith('u') ? "public" : "presonal"
-                const response = await fetch(`/api/getOneTask/${taskId}/${search}`, {
+                const response = await fetch(`/https://tasklyserver-0ux1.onrender.com/api/getOneTask/${taskId}/${search}`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
