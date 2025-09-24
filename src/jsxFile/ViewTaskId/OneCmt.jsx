@@ -17,6 +17,7 @@ export default function comments({ cmt, setAct, user, userId, taskId, my, setMsg
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 },
+                credentials: "include",
             });
 
             const data = await response.json();

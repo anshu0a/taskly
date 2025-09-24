@@ -47,6 +47,7 @@ export default function Timer({ taskId, setAct }) {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${localStorage.getItem("token")}`,
         },
+        credentials: "include",
       });
 
       const data = await response.json();

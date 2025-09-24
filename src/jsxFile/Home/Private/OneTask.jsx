@@ -19,6 +19,7 @@ export default function onetask({ type, data, user, setData, setMsg }) {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 },
+                credentials: "include",
             });
 
             const result = await res.json();

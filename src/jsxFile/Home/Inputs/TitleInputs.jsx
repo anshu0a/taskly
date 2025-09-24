@@ -43,6 +43,7 @@ export default function titleInputs({ value, setvalue }) {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 },
+                credentials: "include",
                 body: JSON.stringify({ title: value }),
             });
 

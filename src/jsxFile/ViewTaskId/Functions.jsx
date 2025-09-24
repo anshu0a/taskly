@@ -21,6 +21,7 @@ export default function functions({ user, taskId, isDone, setAct, title }) {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 },
+                credentials: "include",
                 body: JSON.stringify({ mth: mth }),
             });
 
@@ -50,7 +51,8 @@ export default function functions({ user, taskId, isDone, setAct, title }) {
                     headers: {
                         "Content-Type": "application/json",
                         "Authorization": `Bearer ${localStorage.getItem("token")}`,
-                    }
+                    },
+                    credentials: "include",
                 });
 
                 const data = await response.json();

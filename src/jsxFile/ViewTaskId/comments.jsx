@@ -21,6 +21,7 @@ export default function comments({ act, setAct }) {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 },
+                credentials: "include",
                 body: JSON.stringify({
                     post: act.task._id,
                     owner: act.task.owner._id,
