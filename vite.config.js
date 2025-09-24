@@ -8,4 +8,4 @@ export default defineConfig({
     '/api': 'https://tasklyserver-0ux1.onrender.com'
   }
 }
-}); 
+});

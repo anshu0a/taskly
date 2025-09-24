@@ -1,8 +1,7 @@
 import '../../cssFile/Switch-css/OverSwitch.css'
 
-import OutIndex from './outIndex'
+import OutIndex from './OutIndex'
 import Index from './Index';
-import OutHome from '../Home/OutHome'
 import Junction from "../../Main/Junction"
 
 
