@@ -9,14 +9,6 @@ import NotFound from '../jsxFile/Help/notFound'
 
 export default function App() {
 
-  // useEffect(() => {
-  //   let deviceId = localStorage.getItem("device_id");
-  //   if (!deviceId) {
-  //     deviceId = uuidv4();
-  //     localStorage.setItem("device_id", deviceId);
-  //   }
-  //   console.log("Unique Device ID:", deviceId);
-  // }, []);
 
 
   return (
