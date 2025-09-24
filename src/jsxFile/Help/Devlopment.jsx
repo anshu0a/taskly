@@ -1,4 +1,4 @@
-import '../../cssFile/Help-css/DEvlopment.css'
+import '../../cssFile/Help-css/Devlopment.css'
 
 
 export default function devlopment(){
