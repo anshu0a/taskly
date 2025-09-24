@@ -1,4 +1,4 @@
-import '../../cssFile/Home-css/AddingONeTask.css'
+import '../../cssFile/Home-css/AddingOneTask.css'
 
 import TitleInputs from './Inputs/TitleInputs'
 import Timelineinputs from './Inputs/TimelineInput'
