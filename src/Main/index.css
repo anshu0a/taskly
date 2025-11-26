@@ -28,6 +28,30 @@ a {
   margin: 0;
 }
 
+.BACKBLUR {
+  z-index: 1;
+  position: fixed;
+  backdrop-filter: blur(4px); 
+  -webkit-backdrop-filter: blur(4px); 
+  background: rgba(0, 0, 0, 0.534); 
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+
+.INDIV {
+  width:95%;
+  background-color: rgb(255, 255, 255);
+  max-width: 500px;
+  min-height: 100px;
+  border-radius: 20px;
+  padding:20px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 9px 9px rgba(0, 0, 0, 0.344);
+}
+
 img {
   user-select: none;
 }

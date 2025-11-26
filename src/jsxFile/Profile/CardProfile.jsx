@@ -3,9 +3,8 @@ import { useState } from 'react';
 import OutBox from './Box'
 import Social from './Social'
 
-export default function ({person}) {
+export default function ({ person, setLink, link }) {
     const [random, setRandom] = useState({ forcover: Math.floor(Math.random() * 8), forpic: Math.floor(Math.random() * 27) });
-
     return (<>
         <div className='wholeProfileCard isFlex'>
             <div className='outBackPic isFlex'>
@@ -17,14 +16,15 @@ export default function ({person}) {
                     <p className='ppmm mainName'>{person.name}</p>
                     <p className='ppmm mainProfession'>{person.profession}</p>
                 </div>
-                <div className="socialDiv isFlex">
-                    {/* gm, te, fa, gi, li, sn, tw, wh, yo, in */}
-                    <Social msg="gi" />
-                    <Social msg="li" />
-                    <Social msg="fa" />
-                    <Social msg="te" />
-                    <Social msg="add" />
-                </div>
+                {(link.links.length !== 0 || person.id === person.iAm) &&
+
+                    <div className="socialDiv isFlex">
+                        {link.links?.slice(0, 4).map((one, i) => (
+                            <Social data={one} key={i} />
+                        ))}
+                        {person.id === person.iAm && <Social setLink={setLink} data={{ type: "add" }} />}
+                    </div>
+                }
                 <div className="streekDay isFlex">
                     <img className='firestreekis' src="/Svg/Accounts/fire.svg" />
                     <p className=' cntStreek ppmm'>{person.streek}</p>

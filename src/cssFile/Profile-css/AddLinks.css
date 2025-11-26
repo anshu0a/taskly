@@ -1,0 +1,129 @@
+.boxInLink {
+    gap: 4px;
+}
+
+.boxInLink>.toppLink {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5px;
+}
+
+.boxInLink>.toppLink>.isSvg {
+    cursor: pointer;
+    width: 34px;
+    aspect-ratio: 1/1;
+    background-color: rgba(0, 0, 0, 0.098);
+    padding: 4px;
+    box-sizing: border-box;
+    fill: rgb(28, 28, 28);
+    border-radius: 50%;
+}
+
+.toppLink>.isSvg:hover {
+    fill: rgb(149, 0, 255);
+    background-color: rgba(179, 0, 255, 0.098);
+}
+
+.boxInLink>.toppLink>.LinkingHead {
+    font-weight: 500;
+    font-size: 19px;
+    margin: 0;
+}
+
+.boxInLink>.allSocial {
+    padding: 10px 0px;
+    overflow-y: scroll;
+    max-height: 300px;
+    overflow-x: hidden;
+    margin-top: 10px;
+    background-color: red;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1px;
+    background-color: rgba(250, 235, 215, 0);
+
+}
+
+.boxInLink>.allSocial:hover {
+    background-color: rgba(255, 255, 255, 0.074);
+
+}
+
+.boxInLink>.allSocial>.oneprtx {
+    transition: .2s ease;
+    cursor: pointer;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    width: calc(100% - 10px);
+    margin-right: 10px;
+    gap: 5px;
+    background-color: rgba(9, 9, 9, 0);
+    border-radius: 10px;
+
+}
+
+.boxInLink>.allSocial>.oneprtx>.greenTick {
+    width: 25px;
+    fill: rgb(0, 198, 60);
+}
+
+.boxInLink>.allSocial>.oneprtx:hover {
+
+    background-color: rgb(226, 241, 255);
+}
+
+.boxInLink>.allSocial>.oneprtx>.fstPrt {
+    flex-direction: row !important;
+    gap: 5px;
+}
+
+.boxInLink>.allSocial>.oneprtx>.fstPrt>.socialicn {
+    width: 25px;
+}
+
+.boxInLink>.allSocial>.oneprtx>.fstPrt>.socialtext {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(68, 68, 68);
+}
+
+.boxInLink>.allImputs {
+    margin: 10px 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    width: calc(100% - 10px);
+    align-items: flex-start !important;
+    gap: 5px;
+
+}
+
+.boxInLink>.allImputs>.lebelLink {
+    font-weight: 500;
+    font-size: 17px;
+    color:rgba(49, 0, 54, 0.838);
+
+}
+
+.boxInLink>.allImputs>.impLink {
+    width: 96%;
+    margin:6px 2%;
+    box-sizing: border-box;
+    padding: 6px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid rgb(213, 213, 213);
+    background-color: transparent;
+    outline: none;
+    letter-spacing: .8px;
+
+
+}
+.boxInLink>.allImputs>.btnDivLink{
+    padding:15px 0 0 0;
+    width:100%;
+    gap:10px;
+    flex-direction: row !important;
+
+}

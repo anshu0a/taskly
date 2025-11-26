@@ -8,10 +8,12 @@ import Icon from './Icon'
 import ProfileCard from './CardProfile'
 import Quick from '../Help/NewQuick'
 import Buttom from '../Help/Button'
+import AddLinks from './AddLinks'
 
 export default function ({ }) {
     const [userData, setUserData] = useState({ sts: "loading", msg: "", person: {} })
     const { person } = useParams();
+    const [link, setLink] = useState({ page: 0, links: [] })
 
     useEffect(() => {
         async function getDetails() {
@@ -30,8 +32,9 @@ export default function ({ }) {
                     window.location.href = "/login";
                 }
                 if (!data.error) {
-
-                    setUserData((pre) => ({ ...pre, sts: "found", person: data.person }))
+                    setUserData((pre) => ({ ...pre, sts: "found", person: data.person }));
+                    console.log(data.person)
+                    setLink((pre) => ({ ...pre, links: data.person.links }))
                 } else {
                     setUserData((pre) => ({ ...pre, sts: "not", msg: data.message }))
                 }
@@ -58,7 +61,7 @@ export default function ({ }) {
                         </div>
                     </div>
                     <div className='remainProfile isFlex'>
-                        <ProfileCard person={userData.person} />
+                        <ProfileCard setLink={setLink} link={link} person={userData.person} />
                     </div>
                 </>
                 : userData.sts == "loading" ?
@@ -99,6 +102,7 @@ export default function ({ }) {
                     </div>
         }
         <Quick msg={userData.msg} setMsg={setUserData} />
+        {link.page != 0 && <AddLinks setLink={setLink} link={link} />}
     </div>
 
     );
