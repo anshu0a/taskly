@@ -10,7 +10,7 @@ export default function allLinks({ setLink, link }) {
     const [tab, setTab] = useState({ page: 0, id: "", msg: "", title: '', type: "", url: "", error: false });
     const childRef = useRef(null);
 
-    const list = ["li", "gi", "te", "wh", "gm", "sn", "tw", "yo", "ot"];
+    const list = ["li", "gi", "te", "wh", "gm", "sn","fa" ,"tw", "yo", "ot"];
     const newLinks = link.links.filter(l => list.includes(l.type));
     const oldLinks = list.filter(l => !link.links.some(linkItem => linkItem.type === l));
 
