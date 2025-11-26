@@ -2,6 +2,6 @@ import UnderDevlopment from '../Help/Devlopment'
 
 export default function maintimer(){
     return (<>
-    <UnderDevlopment />
+    <h2>helo</h2>
     </>)
 }

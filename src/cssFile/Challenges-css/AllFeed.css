@@ -1,0 +1,9 @@
+.allfeedd{
+    width:100%;
+    box-sizing: border-box;
+    flex-direction: row-reverse !important;
+    justify-content: space-around !important;
+    flex-wrap: wrap-reverse !important;
+    gap:5px;
+    padding: 20px 2px;
+}

@@ -1,0 +1,6 @@
+.maincreate1{
+    width:100%;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    background-color: red;
+}

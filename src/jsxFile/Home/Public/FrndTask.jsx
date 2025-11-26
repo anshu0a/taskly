@@ -14,7 +14,7 @@ export default function frndtask({ isloading, data, setData, user }) {
                     Array.from({ length: 12 }, (_, i) => <Loader key={i} />)
                     :
                     data?.length == 0 ?
-                        <NoTask />
+                        <NoTask msg="Add your first task" type='task'  />
                         :
                         <>
                             {data.map((onedata, ind) => (

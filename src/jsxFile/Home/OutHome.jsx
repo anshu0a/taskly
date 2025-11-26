@@ -4,11 +4,10 @@ import { useState, useEffect } from "react"
 import AddTask from './AddTask'
 import MyTask from './Private/MyTask'
 import FrndTask from './Public/FrndTask'
-import QuickMsg from '../Help/Quickmsg'
 
 
 
-export default function outHome({ myFeed, }) {
+export default function outHome({ myFeed }) {
     const [isLoading, setIsloading] = useState({ is: false, msg: "" });
     const [data, setData] = useState([]);
     const [user, setUser] = useState(null)
@@ -34,6 +33,7 @@ export default function outHome({ myFeed, }) {
                 if (!data.error) {
                     setData(data.data);
                     setUser(data.user);
+                    console.log(data.data)
                     setIsloading((pre) => ({ ...pre, is: false }));
                     console.log("Data from server in home coming");
                 } else {
@@ -56,7 +56,7 @@ export default function outHome({ myFeed, }) {
                 <div className='top'>
                     <div className="hometop">
                         <p className="topinfo">Taskland<br /><span>Every task is a quest. Complete them all!</span></p>
-                        <AddTask msg="Add Task" />
+                        <AddTask msg="Add Task" type="task" />
                     </div>
                 </div>
                 <div className='mainBody'>

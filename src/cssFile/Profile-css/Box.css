@@ -1,0 +1,67 @@
+.outBox {
+    transition: .2s ease;
+    cursor: pointer;
+    gap: 5px;
+    padding: 8px 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0);
+    flex-direction: row !important;
+    border-radius: 10px;
+}
+
+.outBox:hover {
+    background-color: rgba(0, 34, 255, 0.078);
+}
+
+.outBox>.iconBox {
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+}
+
+.outBox>.iconBox>.iconshown {
+    transition: .2s ease;
+    width: 25px;
+    aspect-ratio: 1/1;
+}
+
+.outBox:hover>.iconBox>.iconshown {
+    width: 20px;
+}
+
+.outBox>.iconBox>.iconshown path {
+    fill: rgb(119, 0, 255)
+}
+
+.outBox:hover>.iconBox>.iconshown path {
+    fill: rgb(0, 47, 255)
+}
+
+.outBox>.whatcnt {
+    text-align: start;
+    font-size: 13px;
+    color: rgba(61, 0, 130, 0.85);
+    font-weight: 500;
+}
+
+.outBox:hover>.whatcnt {
+    color: rgb(0, 20, 110)
+}
+
+.outBox>.whatcnt>b {
+    color: rgba(59, 0, 126, 0.901);
+}
+
+.outBox:hover>.whatcnt>b {
+    color: rgb(0, 20, 111)
+}
+
+@media (max-width: 630px) {
+    .outBox {
+    flex-direction: column !important;
+}
+.outBox>.whatcnt {
+    text-align: center;
+}
+}

@@ -1,0 +1,63 @@
+.outIcon {
+    transition: .2s ease;
+    cursor: pointer;
+    background-color: rgba(77, 0, 221, 0.084);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 8px 0;
+    flex-direction: row !important;
+    gap: 2px
+}
+
+.outIcon:hover {
+    background-color: rgba(77, 0, 221, 0.4);
+}
+
+.outIcon>.msgIs {
+      user-select: none;
+    transition: .2s ease;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(80, 0, 138)
+}
+
+.outIcon:hover>.msgIs {
+  
+    color: rgb(239, 239, 239);
+}
+
+.outIcon>.whatisIcon {
+    transition: .2s ease;
+    width: 25px;
+    aspect-ratio: 1/1;
+    stroke: rgb(49, 0, 163);
+}
+
+.outIcon:hover>.whatisIcon {
+    stroke: rgb(255, 255, 255);
+}
+
+
+.extraCssIcon {
+    background-color: rgba(0, 70, 162, 0.101);
+}
+
+.extraCssIcon:hover {
+    background-color: rgba(0, 103, 221, 0.4);
+}
+
+.extraCssIcon>.msgIs {
+
+    color: rgb(0, 162, 255);
+}
+
+.extraCssIcon>.whatisIcon {
+    stroke: rgb(0, 70, 100);
+}
+
+@media (max-width:630px) {
+    .outIcon>.msgIs {
+        display: none;
+    }
+}

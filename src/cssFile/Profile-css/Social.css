@@ -1,0 +1,24 @@
+.SocialDiv {
+    cursor: pointer;
+    width: 32px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    
+
+}
+.SocialDiv:hover{
+background-color: rgba(237, 237, 237, 0.392);
+}
+
+.SocialDiv>.cpmyIcn {
+    transition: .2s ease;
+    width: 25px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.SocialDiv:hover>.cpmyIcn {
+    width: 20px;
+}

@@ -1,0 +1,75 @@
+.loadingit {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(9, 9, 9);
+}
+
+.loadingit>.imgit{
+    width:50%;
+    max-width: 300px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(1);
+    animation: blinkit 3s infinite forwards ease-in;
+}
+@keyframes blinkit {
+  0%, 5% {
+    filter: brightness(0);
+  }
+
+  6% {
+    filter: brightness(2.5);
+  }
+
+  7% {
+    filter: brightness(0);
+  }
+
+  12% {
+    filter: brightness(3);
+  }
+
+  15% {
+    filter: brightness(0.4);
+  }
+
+  22% {
+    filter: brightness(3.5);
+  }
+
+  25% {
+    filter: brightness(0.3);
+  }
+
+  /* soft flicker */
+  30% {
+    filter: brightness(3.2);
+  }
+  33% {
+    filter: brightness(0.5);
+  }
+  38% {
+    filter: brightness(3.8);
+  }
+  42% {
+    filter: brightness(0.6);
+  }
+
+  /* stabilize */
+  55% {
+    filter: brightness(3.8);
+  }
+  65% {
+    filter: brightness(1);
+  }
+  80% {
+    filter: brightness(4);
+  }
+
+  100% {
+    filter: brightness(3.5);
+  }
+}

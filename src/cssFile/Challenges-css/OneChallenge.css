@@ -1,0 +1,107 @@
+.onechallenge {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.9/1.1;
+    flex: 1 1 350px;
+    max-height: 220px;
+    cursor: pointer;
+
+}
+
+.onechallenge>.myvid {
+    scale: .98;
+    transition: .3s ease;
+    filter: brightness(.4);
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.893);
+}
+
+.onechallenge>.borderis {
+    scale: .98;
+    transition: .3s ease;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    gap: 3px;
+    overflow: hidden;
+}
+
+.onechallenge:hover>.myvid,
+.onechallenge:hover>.borderis {
+    scale: 1;
+}
+
+.onechallenge>.borderis>.title76 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.onechallenge>.borderis>.purpuse76 {
+    font-size: 14px;
+    margin: 0;
+
+}
+
+.onechallenge>.borderis>.neworedit {
+    background: linear-gradient(rgb(255, 0, 0), rgb(154, 0, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 24px;
+    transform: rotateZ(-45deg) translate(-25%, -50%);
+    font-size: 12px;
+    font-weight: 500;
+}
+.onechallenge:hover>.borderis>.neworedit{
+    display: none;
+}
+.onechallenge>.borderis>.daysagoo {
+    flex-direction:  row-reverse;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+    gap:4px;
+    font-size: 11px;
+}
+.onechallenge>.borderis>.daysagoo>.actdayy{
+    border-radius: 5px;
+    padding: 5px 10px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.129)
+}
+.onechallenge>.borderis>.daysagoo>div>.pinned{
+    transition: .2s ease;
+    padding:0px;
+    border-radius: 50%;
+    background-color: rgb(0, 106, 255);
+    width:0px;
+    aspect-ratio: 1/1;
+}
+.onechallenge:hover>.borderis>.daysagoo>div>.pinned{
+   width:14px;
+   padding:5px;
+}
+.onechallenge>.borderis>.daysagoo>div>.pinned:hover{
+    opacity: .6;
+}
+.onechallenge>.borderis>.daysagoo>div>.pinned path{
+    fill:rgb(255, 255, 255);
+}
+.onechallenge>.borderis>.daysagoo>div>.notpin{
+      backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.129)
+}
+.onechallenge>.borderis>.daysagoo>div>.notpin path{
+    fill:rgb(255, 255, 255);
+}

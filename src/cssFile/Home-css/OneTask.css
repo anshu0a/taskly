@@ -37,9 +37,9 @@
 
 .mytask>.outonetask>.onetask>.taskimg {
     width: 100%;
-    aspect-ratio: 1/.6;
+    aspect-ratio: 1.9/1.1;
     object-fit: cover;
-    max-height: 300px;
+    max-height: 220px;
 
 }
 
