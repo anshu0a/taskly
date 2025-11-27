@@ -14,6 +14,7 @@ export default function allLinks({ setLink, link }) {
     const newLinks = link.links.filter(l => list.includes(l.type));
     const oldLinks = list.filter(l => !link.links.some(linkItem => linkItem.type === l));
 
+    
     async function addLink() {
         try {
             if (tab.url == '' || tab.title == '' || tab.error) {
