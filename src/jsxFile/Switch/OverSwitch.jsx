@@ -10,11 +10,13 @@ import Loading from './Loading'
 
 
 export default function overSwitch() {
-    const [myData, setMyData] = useState({ loading: false, msg: "", })
+    const [myData, setMyData] = useState({ loading2: false, loading: false, msg: "", })
 
 
     useEffect(() => {
-
+        setTimeout(() => {
+            setMyData(pre => ({ ...pre, loading2:true }));
+        }, 200);
         if (sessionStorage.getItem("status") != "allreadyIn") {
             sessionStorage.setItem("status", "allreadyIn");
             setMyData((pre) => ({ ...pre, loading: true }));
@@ -36,6 +38,8 @@ export default function overSwitch() {
             {myData.loading ?
                 <Loading />
                 :
+                myData.loading2 &&
+
                 <div className="overSwitch">
                     <div className='switch'>
                         <div className="hidenav">
