@@ -40,6 +40,9 @@
 
 
 .index>.outnav>.navicon {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
     width: 25px;
     aspect-ratio: 1/1;
 

@@ -1,8 +1,8 @@
 import '../../cssFile/Switch-css/Index.css'
+import { jwtDecode } from 'jwt-decode';
 
 export default function index({ name }) {
     let newName = name?.toLowerCase();
-
     return (
         <div onClick={() => window.location.href = (`/taskly/${newName == 'tasks' ? 'global' : newName == 'challenges' ? 'challenges/global' : newName.slice(0, 1) == '@' ? `profile/${newName.slice(1)}` : newName}`)} className="index">
             <div className='outnav'>
@@ -33,7 +33,10 @@ export default function index({ name }) {
                                 <svg className='navicon' viewBox="-200 -150 2200 2200" >
                                     <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" ></path>
                                 </svg>
-
+                                : name.startsWith("@") ? 
+                                
+                                <img  className='navicon' src={jwtDecode(localStorage.getItem("token")).photo} />
+ 
                                 :
                                 <svg className='navicon' viewBox="0 0 128 128" >
                                     <path d="M30,49c0,18.7,15.3,34,34,34s34-15.3,34-34S82.7,15,64,15S30,30.3,30,49z M90,49c0,14.3-11.7,26-26,26S38,63.3,38,49   s11.7-26,26-26S90,34.7,90,49z" />
