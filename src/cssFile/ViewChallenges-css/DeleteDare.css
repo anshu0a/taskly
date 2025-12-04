@@ -1,0 +1,24 @@
+.deleteDare {
+    width: 100%;
+    padding:20px 10px ;
+    box-sizing: border-box;
+}
+
+.deleteDare>.oneDel {
+    background-color: rgba(255, 0, 0, 0.033);
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid red;
+}
+
+.deleteDare>.oneDel>.txtdel {
+    color: red;
+}
+
+.deleteDare>.oneDel>.btnbox {
+    padding: 10px 0;
+    width: 105px;
+}

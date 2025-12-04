@@ -9,6 +9,7 @@ import Challenges from  '../jsxFile/Challenges/MainChallenges'
 import Devlopment from  '../jsxFile/Devlopment/UnderDevlopment.jsx'
 import CreateChallenges from '../jsxFile/CreateChallenges/MainCreate.jsx'
 import Profile from '../jsxFile/Profile/MainProfile.jsx'
+import OneChallenges from '../jsxFile/ViewChallenges/MainViewChallenges.jsx'
 
 export default function Junction() {
   return (
@@ -23,6 +24,7 @@ export default function Junction() {
       <Route path="create_challenges" element={<CreateChallenges />} />
       <Route path="settings" element={<Devlopment />} />
       <Route path="profile/:person" element={<Profile />} />
+      <Route path="view_challenges/:type/:dareId" element={<OneChallenges />} />
       <Route path="*" element={<NotFound />} />
       
       

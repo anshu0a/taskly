@@ -1,0 +1,269 @@
+.toponedare>.hometop {
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+.toponedare {
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+/* _________________________________ */
+
+.mainviewdare {
+    width: calc(100% - 20px) !important;
+    justify-content: flex-start !important;
+    padding: 0 10px;
+    margin-bottom: 5000px;
+
+}
+
+.mainviewdare>.auradare {
+    margin: 20px 0;
+    text-align: center;
+    user-select: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 153, 119);
+
+}
+
+.mainviewdare>.auradare>span {
+    padding: 7px 14px 9px 14px;
+    background-color: rgb(255, 223, 209);
+    border-radius: 20px;
+    color: rgb(255, 60, 0);
+}
+
+.loadingonedare {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    justify-content: flex-start !important
+}
+
+.loadingonedare>.cctt {
+    width: 100%;
+    max-height: 460px
+}
+
+/* ________________________________________  mobile  _____________________________________________ */
+@media (max-width:630px) {
+
+
+    .mainviewdare {
+        height: calc(100vh - 130px);
+    }
+
+
+}
+
+
+/* ________________________________________________desc_______________________________________ */
+
+.descit {
+    width: 100%;
+    align-items: flex-start !important;
+}
+
+.descit>.maindsc {
+    color: rgb(131, 131, 131);
+    min-height: 200px;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgb(241, 249, 255);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    letter-spacing: .5px;
+    font-size: 14px;
+}
+
+/* _____________________________________________people______________________________________ */
+
+.peopleDare {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 30px 40px 30px;
+    box-sizing: border-box;
+    align-self: flex-start;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.peopleDare>.headdare {
+    margin: 15px 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 23, 78, 0.71);
+}
+
+.peopleDare>.ohpp {
+    color: grey;
+    font-size: 14px;
+
+}
+
+/* __________________________________________________________ timeline _____________________________________________ */
+
+.timelineDare {
+    width: 100%;
+    align-items: flex-start !important;
+
+}
+
+.timelineDare>.drboxTime {
+    max-width: 600px;
+    gap: 5px;
+    padding: 20px;
+    background-color: rgb(244, 250, 255);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.timelineDare>.drboxTime>p {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    color: rgb(133, 133, 133)
+}
+
+.timelineDare>.drboxTime>p>span {
+    color: rgb(59, 59, 59);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/* __________________________________________________________________info___________________________________________ */
+
+.infoDare {
+    width: 100%;
+}
+
+.infoDare>.ininfo {
+    max-width: 600px;
+    background-color: rgb(255, 247, 238);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.infoDare>.ininfo>p {
+    width: 100%;
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+    margin: 0;
+}
+
+.infoDare>.ininfo>p>span {
+    user-select: none;
+    color: rgb(38, 38, 38);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* _______________________________________________________imgs _____________________________________ */
+
+.allimgs {
+    margin: 40px 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+        "a a b b"
+        "a a c c"
+        "d d c c";
+    gap: 15px;
+}
+
+.allimgs>img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.allimgs>img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Grid areas */
+.itm0 {
+    grid-area: a;
+}
+
+.itm1 {
+    grid-area: b;
+}
+
+.itm2 {
+    grid-area: c;
+}
+
+.itm3 {
+    grid-area: d;
+}
+
+/* Optional: add slight gradient overlay for text or visual effect */
+.allimgs>img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+    pointer-events: none;
+}
+
+/* _______________________________________________________voice _____________________ */
+.outdiver {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    gap: 5px;
+}
+
+.outdiver>.voceControl {
+    width: 90%;
+    max-width: 900px;
+    background-color: rgb(255, 255, 255);
+}
+
+.outdiver>.bbtton{
+    cursor: pointer;
+    width:25px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    padding: 12px;
+
+}
+
+.outdiver>.bbtton>.figg{
+    transition: .2s ease;
+    fill:rgb(255, 255, 255);
+    width:100%;
+}
+.outdiver>.bbtton:hover>.figg{
+fill:rgb(223, 239, 255);
+scale: .90;
+}

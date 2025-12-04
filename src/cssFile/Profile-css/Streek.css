@@ -1,0 +1,27 @@
+.streekDay {
+    cursor: pointer;
+    padding: 8px 12px;
+    position: absolute;
+    gap:5px;
+    top: 0;
+    left: 0;
+    margin: 8px 6px;
+    flex-direction: row !important;
+    border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.237);
+}
+
+.streekDay:hover{
+    background-color: rgba(255, 0, 0, 0.442);
+}
+
+.streekDay > .firestreekis {
+    width:20px;
+}
+
+.streekDay>.cntStreek {
+    letter-spacing: .5px;
+    color: rgb(255, 222, 160);
+    font-size: 14px;
+    font-weight: 500;
+}

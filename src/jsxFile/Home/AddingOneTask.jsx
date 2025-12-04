@@ -6,10 +6,10 @@ import InputTemp from './InputTemplet'
 import Loading from '../Help/Loading'
 import QuickMsg from '../Help/Quickmsg'
 
-export default function addingOneTask({}) {
+export default function addingOneTask({ }) {
     const [more, setMore] = useState(false)
     const [wait, setWait] = useState({ isload: false, loadmsg: '', quick: "", error: false })
-    const [value, setvalue] = useState({ taskexist: true, errorTitle: '', errorPurpose: '', title: '', purpose: '', priority: 75, type: 'personal', about: '', timeLine: 1, voice: null, voicePreview: null, images: [], })
+    const [value, setvalue] = useState({taskexist: true, errorTitle: '', errorPurpose: '', title: '', purpose: '', priority: 75, type: 'personal', about: '', timeLine: 1, voice: null, voicePreview: null, images: [], })
 
     async function taskAdd() {
         if (value.taskexist || value.errorTitle != '' || value.errorPurpose != '' || value.title == '' || value.purpose == '') {
@@ -26,7 +26,7 @@ export default function addingOneTask({}) {
             formData.append('about', value.about)
             formData.append('timeLine', value.timeLine)
 
-           
+
             if (value.voice) formData.append('voice', value.voice)
 
             // Append images if exist
@@ -54,7 +54,7 @@ export default function addingOneTask({}) {
             }
         } catch (err) {
             console.log('error from backend while saving task:', err)
-            setWait((pre) => ({ ...pre, isload: false, msg: "", quick: err.message  + "%-+%" + Date.now() || "somthing went wrong.", error: true, }));
+            setWait((pre) => ({ ...pre, isload: false, msg: "", quick: err.message + "%-+%" + Date.now() || "somthing went wrong.", error: true, }));
 
         }
     }
@@ -63,7 +63,7 @@ export default function addingOneTask({}) {
         <>
             <div className='top'>
                 <div className='hometop'>
-                    <Back setIsAdd={()=>window.history.back()} />
+                    <Back setIsAdd={() => window.history.back()} />
                     <p style={{ textAlign: 'end' }}>
                         Adding a task
                         <br />
@@ -92,7 +92,7 @@ export default function addingOneTask({}) {
                     )}
 
                     <div className='btndivinput'>
-                        <Button msg='Create Task' fn={()=>taskAdd()} typ={1} />
+                        <Button msg='Create Task' fn={() => taskAdd()} typ={1} />
                     </div>
                 </div>
             </div>

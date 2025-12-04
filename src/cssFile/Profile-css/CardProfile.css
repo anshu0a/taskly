@@ -107,32 +107,7 @@
 }
 
 
-.wholeProfileCard>.outBackPic>.streekDay {
-    cursor: pointer;
-    padding: 5px 8px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 8px 6px;
-    flex-direction: row !important;
-    gap:2px;
-    border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.237);
-}
 
-.wholeProfileCard>.outBackPic>.streekDay:hover{
-    background-color: rgba(255, 0, 0, 0.442);
-}
-
-.wholeProfileCard>.outBackPic>.streekDay > .firestreekis {
-    width:15px
-}
-
-.wholeProfileCard>.outBackPic>.streekDay>.cntStreek {
-    color: rgb(255, 222, 160);
-    font-size: 12px;
-    font-weight: 500;
-}
 
 .wholeProfileCard>.outBackPic>.socialDiv {
     flex-direction: row !important;

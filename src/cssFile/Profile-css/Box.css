@@ -39,6 +39,7 @@
 }
 
 .outBox>.whatcnt {
+    user-select: none;
     text-align: start;
     font-size: 13px;
     color: rgba(61, 0, 130, 0.85);
@@ -50,6 +51,7 @@
 }
 
 .outBox>.whatcnt>b {
+    
     color: rgba(59, 0, 126, 0.901);
 }
 

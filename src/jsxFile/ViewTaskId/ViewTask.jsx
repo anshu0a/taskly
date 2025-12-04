@@ -13,11 +13,12 @@ import Comments from './comments'
 
 
 export default function viewtask() {
-    const [act, setAct] = useState({ userId: '', voice: { is: false, audio: null }, extra: null, fade: true, found: true, task: null, imgError: false, bgIndex: 0 })
+    const [act, setAct] = useState({found: true, userId: '', voice: { is: false, audio: null }, extra: null, fade: true, found: true, task: null, imgError: false, bgIndex: 0 })
     const { taskId } = useParams();
     useEffect(() => {
         async function gettask() {
             try {
+
                 const search = localStorage.getItem("type").endsWith('u') ? "public" : "presonal"
                 const response = await fetch(`${import.meta.env.VITE_API_URL}/api/getOneTask/${taskId}/${search}`, {
                     method: "GET",
@@ -29,20 +30,19 @@ export default function viewtask() {
                 });
 
                 const data = await response.json();
-                const voice = data.task.voices[0];
-
-                if (voice?.data?.data) {
-                    const byteArray = new Uint8Array(voice.data.data);
-                    const blob = new Blob([byteArray], { type: voice.contentType });
-                    setAct((pre) => ({ ...pre, voice: { is: false, audio: URL.createObjectURL(blob) } }))
-                }
                 if (data.notLogin) {
                     window.location.href = "/login";
                 }
                 if (!data.error) {
+                    const voice = data.task.voices[0];
+                    if (voice?.data?.data) {
+                        const byteArray = new Uint8Array(voice?.data.data);
+                        const blob = new Blob([byteArray], { type: voice.contentType });
+                        setAct((pre) => ({ ...pre, voice: { is: false, audio: URL.createObjectURL(blob) } }))
+                    }
                     setAct((pre) => ({ ...pre, userId: data.user, found: true, task: data.task, extra: data.extra }))
                 } else {
-
+                    setAct((pre)=>({...pre, found :false}))
                 }
             } catch (err) {
                 console.log("Error from server:", err);

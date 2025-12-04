@@ -14,7 +14,12 @@ import UserNotFound from './NotFoundUser '
 export default function ({ }) {
     const [userData, setUserData] = useState({ sts: "loading", msg: "", person: {} })
     const { person } = useParams();
-    const [link, setLink] = useState({ page: 0, links: [] })
+    const [link, setLink] = useState({ page: 0, links: [] });
+
+    const copyText = function (msg, link) {
+        navigator.clipboard.writeText(link);
+        setUserData((pre) => ({ ...pre, msg: msg }))
+    };
 
     useEffect(() => {
         async function getDetails() {
@@ -33,8 +38,8 @@ export default function ({ }) {
                     window.location.href = "/login";
                 }
                 if (!data.error) {
+                    console.log(data)
                     setUserData((pre) => ({ ...pre, sts: "found", person: data.person }));
-                    console.log(data.person)
                     setLink((pre) => ({ ...pre, links: data.person.links }))
                 } else {
                     setUserData((pre) => ({ ...pre, sts: "not", msg: data.message }))
@@ -55,20 +60,21 @@ export default function ({ }) {
             userData.sts == "found" ?
                 <>
                     <div className='topprofileis isFlex'>
-                        <p title="Copy Username" className='nameInProfile'>{userData.person.username}</p>
+                        <p onClick={() => copyText("username copied", userData.person.username)} title={`Copy ${userData.person.username}`} className='nameInProfile'>{userData.person.username}</p>
                         <div className='iconBox isFlex'>
                             <Icon msg="Edit" />
-                            <Icon msg="Share" />
+                            <Icon fn={() => copyText("Link copied.", `https://taskly-three-sage.vercel.app/taskly/profile/${userData.person.username}`)} msg="Share" />
                         </div>
                     </div>
                     <div className='remainProfile isFlex'>
+
                         <ProfileCard setLink={setLink} link={link} person={userData.person} />
                     </div>
                 </>
                 : userData.sts == "loading" ?
-                   <PreLoader /> 
+                    <PreLoader />
                     :
-                    <UserNotFound msg=" User Not Found"/>
+                    <UserNotFound msg=" User Not Found" />
         }
         <Quick msg={userData.msg} setMsg={setUserData} />
         {link.page != 0 && <AddLinks setLink={setLink} link={link} />}

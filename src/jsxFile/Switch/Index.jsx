@@ -40,7 +40,7 @@ export default function index({ name }) {
                                 </svg>
                 }
 
-                <p className='navtext'>{name}</p>
+                <p className='navtext'>{name.replace("@","")}</p>
 
             </div>
         </div>)

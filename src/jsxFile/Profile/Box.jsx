@@ -1,7 +1,7 @@
 import '../../cssFile/Profile-css/Box.css'
 
 
-export default function Box({ msg, cnt, other, fn }) {
+export default function Box({ msg, cnt, other, fn}) {
 
     return (<>
         <div onClick={fn} className="outBox isFlex">

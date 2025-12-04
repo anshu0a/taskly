@@ -48,7 +48,7 @@
 /* _______________________________________________________________task time ____________ */
 .titleInputs>.maininps>.dayinp {
     text-align: center;
-    width:41px;
+    width: 41px;
     letter-spacing: 1px;
     padding: 4px;
     border: none;
@@ -70,6 +70,22 @@
 
 .titleInputs:hover:hover>.secH {
     color: rgb(237, 171, 255);
+}
+
+.titleInputs>.sevH {
+    color: rgb(220, 236, 255);
+}
+
+.titleInputs:hover:hover>.sevH {
+    color: rgb(190, 219, 255);
+}
+
+.titleInputs>.eigH {
+    color: rgb(221, 221, 221);
+}
+
+.titleInputs:hover:hover>.eigH {
+    color: rgb(180, 180, 180);
 }
 
 /* ________________________________task tevel___________________________________ */
@@ -231,7 +247,7 @@
     box-sizing: border-box;
     border-radius: 50%;
     padding: 8px;
-    height:35px;
+    height: 35px;
     background-color: rgb(49, 49, 49);
 }
 
@@ -331,4 +347,218 @@
 .btndivinput {
     margin: 20px 20px 40px 20px;
     align-self: flex-end;
+}
+
+
+/* ___________________________All dare ______________________ */
+.maininps>.boxOfDare {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: flex-start !important;
+    align-items: self-start !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px;
+}
+
+.maininps>.boxOfDare>.onedare {
+    transition: .2s ease;
+    color: rgb(66, 66, 66);
+    background-color: rgb(232, 232, 232);
+    padding: 6px 10px;
+    border-radius: 8px;
+    flex-direction: row !important;
+    gap: 5px;
+}
+
+.maininps>.boxOfDare>.onedare:hover {
+    color: rgb(66, 66, 66);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 4px rgba(4, 4, 4, 0.245);
+}
+
+.maininps>.boxOfDare>.onedare>.isp {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+
+
+}
+
+.maininps>.boxOfDare>.onedare>.cutit {
+    transition: .25s ease;
+    width: 25px;
+    fill: rgb(77, 77, 77)
+}
+
+.maininps>.boxOfDare>.onedare>.cutit:hover {
+    cursor: pointer;
+    transform: rotateZ(95deg);
+    fill: rgb(255, 0, 0);
+}
+
+/* ____________________collab __________________ */
+
+.maininps>.userBox {
+    background-color: rgb(246, 246, 246);
+    box-sizing: border-box;
+    border-radius: 20px;
+    min-height: 60px;
+    padding: 20px;
+    width: 100%;
+    justify-content: flex-start !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    gap:10px;
+
+}
+
+.maininps .frndimg {
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    aspect-ratio: 1/1;
+}
+
+.maininps .frndimg:hover {
+    box-shadow: 0 0 9px 10px rgba(0, 0, 0, 0.108);
+}
+
+.maininps .frndimg>.thisImg {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.maininps .frndimg>.ccut {
+    transition: .2s ease;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    transform: translate(25%, 0%);
+    aspect-ratio: 1/1;
+}
+
+.maininps .frndimg>.ccut:hover {
+    fill: red;
+    transform: translate(25%, 0%) rotateZ(90deg);
+}
+
+.maininps>.schDiv {
+    box-sizing: border-box;
+    width: 100%;
+    gap: 5px;
+    padding: 15px;
+    align-items: flex-start;
+    border-radius: 20px;
+    margin: 10px 0;
+    border: 1px solid rgb(200, 200, 200);
+    max-width: 500px;
+}
+
+.maininps>.schDiv>.lbl {
+    font-size: 16px;
+    color: grey;
+    border-radius: 15px;
+}
+
+.maininps>.schDiv>.iinp {
+    width: 100%;
+    gap: 5px;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+}
+
+.maininps>.schDiv>#sch {
+    border: none;
+    box-sizing: border-box;
+    width: calc(100%);
+    outline: none;
+    font-size: inherit;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(115, 0, 255, 0.058);
+    letter-spacing: 0.5px;
+    color: rgb(81, 0, 81);
+}
+
+.maininps>.schDiv>#sch::placeholder {
+    color: rgb(175, 175, 175);
+    font-size: 15px;
+}
+
+.maininps>.schDiv>.frndZone {
+    width: 100%;
+    gap: 1px;
+    padding: 5px;
+
+}
+
+.maininps>.schDiv>.frndZone>.oneZone {
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.maininps>.schDiv>.frndZone>.oneZone:hover {
+    background-color: rgba(0, 0, 0, 0.039);
+}
+
+.maininps>.schDiv>.frndZone>.oneZone>.prt1 {
+    width: calc(100% - 50px);
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5px;
+}
+
+.maininps>.schDiv>.frndZone>.oneZone>.prt1>.frdPic {
+    cursor: pointer;
+    width: 40px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.maininps>.schDiv>.frndZone>.oneZone>.prt1>.nArea {
+    width: calc(100% - 45px);
+    align-items: flex-start !important;
+}
+
+.maininps>.schDiv>.frndZone>.oneZone>.prt1>.nArea>p {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.maininps>.schDiv>.frndZone>.oneZone>.prt1>.nArea>.nm {
+    font-size: 13px;
+    color: grey
+}
+
+.maininps>.schDiv>.frndZone>.oneZone>.prt1>.nArea>.usr {
+    font-size: 16px;
+}
+
+.maininps>.schDiv>.frndZone>.oneZone>.prt2 {
+    cursor: pointer;
+    fill: rgba(128, 128, 128, 0);
+    width: 35px;
+    padding:2px 5px;
+
+    aspect-ratio: 1/1;
+}
+
+.maininps>.schDiv>.frndZone>.oneZone>.prt2:hover>polyline,
+.maininps>.schDiv>.frndZone>.oneZone>.prt2:hover>circle {
+    stroke: rgb(0, 172, 14)
 }

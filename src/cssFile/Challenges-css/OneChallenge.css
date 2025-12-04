@@ -52,8 +52,20 @@
 
 }
 
+.onechallenge>.borderis>p {
+    max-width: 500px;
+    transition: .2s ease;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.onechallenge:hover>.borderis>p {
+    opacity: 1;
+}
+
 .onechallenge>.borderis>.neworedit {
-    background: linear-gradient(rgb(255, 0, 0), rgb(154, 0, 0));
+    background: rgba(255, 0, 0, 0.62);
     position: absolute;
     top: 0;
     left: 0;
@@ -62,25 +74,29 @@
     font-size: 12px;
     font-weight: 500;
 }
-.onechallenge:hover>.borderis>.neworedit{
-    display: none;
+
+.onechallenge:hover>.borderis>.neworedit {
+    opacity: .2;
 }
+
 .onechallenge>.borderis>.daysagoo {
-    flex-direction:  row-reverse;
+    flex-direction: row-reverse;
     position: absolute;
     top: 0;
     right: 0;
     margin: 8px;
-    gap:4px;
+    gap: 4px;
     font-size: 11px;
 }
-.onechallenge>.borderis>.daysagoo>.actdayy{
+
+.onechallenge>.borderis>.daysagoo>.actdayy {
     border-radius: 5px;
     padding: 5px 10px;
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.129)
 }
-.onechallenge>.borderis>.daysagoo>div>.pinned{
+
+/* .onechallenge>.borderis>.daysagoo>div>.pinned{
     transition: .2s ease;
     padding:0px;
     border-radius: 50%;
@@ -104,4 +120,38 @@
 }
 .onechallenge>.borderis>.daysagoo>div>.notpin path{
     fill:rgb(255, 255, 255);
+} */
+
+.onechallenge>.borderis>.imgbox {
+    transition: .2s ease;
+    position: absolute;
+    max-width: 100%;
+    overflow: hidden;
+    opacity: 1;
+    width: 100%;
+    gap: 5px
+}
+
+.onechallenge:hover>.borderis>.imgbox {
+    opacity: 0;
+}
+
+.onechallenge>.borderis>.imgbox>.adminImg {
+    width: 55px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.onechallenge>.borderis>.imgbox>.peap {
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: keep-all;
+
 }

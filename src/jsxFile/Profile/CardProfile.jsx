@@ -2,6 +2,7 @@ import '../../cssFile/Profile-css/CardProfile.css'
 import { useState } from 'react';
 import Social from './Social'
 import DownPart from './DownPart'
+import Streek from './Streek'
 
 export default function ({ person, setLink, link }) {
     const [random, setRandom] = useState({ forcover: Math.floor(Math.random() * 8), forpic: Math.floor(Math.random() * 27) });
@@ -13,7 +14,7 @@ export default function ({ person, setLink, link }) {
                 <img className='yeHAiCover' src={person.cover}></img>
                 <div className='forMainPic isFlex'>
                     <div className='profileDiv isFlex'>
-                        <img className='actImg' src={person.pic}></img>
+                        <img className='actImg' alt="profile pic" referrerPolicy="no-referrer" src={person.pic} />
                     </div>
                     <p className='ppmm mainName'>{person.name}</p>
                     <p className='ppmm mainProfession'>{person.profession}</p>
@@ -27,10 +28,7 @@ export default function ({ person, setLink, link }) {
                         {person.id === person.iAm && <Social setLink={setLink} data={{ type: "add" }} />}
                     </div>
                 }
-                <div className="streekDay isFlex">
-                    <img className='firestreekis' src="/Svg/Accounts/fire.svg" />
-                    <p className=' cntStreek ppmm'>{person.streek}</p>
-                </div>
+                <Streek typ={true} streek={person.merit} />
             </div>
             <p className='bioInProfile'>{person.bio}</p>
             <DownPart person={person}/>

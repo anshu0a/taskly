@@ -1,0 +1,63 @@
+.progressDare {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.progressDare>.mainBoundry {
+    max-width: 600px;
+    width: 100%;
+    min-height: 300px;
+
+}
+.progressDare>.mainBoundry>.blurpp{
+ width:90%;
+ max-width: 400px;
+ text-align: center;
+ color:rgb(159, 159, 159);
+ font-size: 13px;
+ margin:0 0 30px 0 ;
+}
+.progressDare>.mainBoundry>.blurpp>span{
+    color:rgb(69, 69, 69);
+    font-weight: 500;
+}
+.progressDare > .mainBoundry > .circleIt {
+    border-radius: 50%;
+    max-width: 150px;
+    width: 90%;
+    aspect-ratio: 1/1;
+    min-width: 50px;
+    animation: pulse 2s infinite ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+}
+
+.progressDare>.mainBoundry>.circleIt>.ohcome {
+    user-select: none;
+    width: 97%;
+    border-radius: inherit;
+    aspect-ratio: 1/1;
+    background-color: aliceblue;
+}
+
+.progressDare>.mainBoundry>.circleIt>.ohcome>.pclas {
+    background-color: antiquewhite;
+    aspect-ratio: 1/1;
+    padding: 10px;
+    background-color: rgb(0, 123, 255);
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    width:95%;
+    box-sizing: border-box;
+    font-weight: 500;
+}

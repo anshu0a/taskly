@@ -44,10 +44,10 @@ export default function OptionLogin() {
         <img className="imgdir" src="./Svg/google.svg" alt="Google" />
         <p>Google</p>
       </div>
-      <div className='isFlex oneoptn'>
+      {/* <div className='isFlex oneoptn'>
         <img className="imgdir" src="./Svg/guest.svg" alt="Guest" />
         <p>Guest</p>
-      </div>
+      </div> */}
       <div onClick={() => window.location.replace("./create")} className='isFlex oneoptn'>
         <img className="imgdir" src="./Svg/create.svg" alt="Create" />
         <p>Create</p>

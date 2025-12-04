@@ -16,60 +16,78 @@
     animation: blinkit 3s infinite forwards ease-in;
 }
 @keyframes blinkit {
-  0%, 5% {
-    filter: brightness(0);
+  /* gentle warm-up */
+  0% {
+    filter: brightness(0.7);
   }
 
-  6% {
+  8% {
     filter: brightness(2.5);
   }
 
-  7% {
-    filter: brightness(0);
-  }
-
   12% {
-    filter: brightness(3);
-  }
-
-  15% {
-    filter: brightness(0.4);
-  }
-
-  22% {
-    filter: brightness(3.5);
-  }
-
-  25% {
-    filter: brightness(0.3);
-  }
-
-  /* soft flicker */
-  30% {
-    filter: brightness(3.2);
-  }
-  33% {
-    filter: brightness(0.5);
-  }
-  38% {
-    filter: brightness(3.8);
-  }
-  42% {
-    filter: brightness(0.6);
-  }
-
-  /* stabilize */
-  55% {
-    filter: brightness(3.8);
-  }
-  65% {
-    filter: brightness(1);
-  }
-  80% {
     filter: brightness(4);
   }
 
-  100% {
-    filter: brightness(3.5);
+  39% {
+    filter: brightness(4);
+  }
+
+  /* sudden voltage drop */
+  40% {
+    filter: brightness(0);
+  }
+
+  /* unstable initial flicker bursts */
+  41% {
+    filter: brightness(1.8);
+  }
+
+  43% {
+    filter: brightness(0.2);
+  }
+
+  45% {
+    filter: brightness(3.3);
+  }
+
+  47% {
+    filter: brightness(0.4);
+  }
+
+  /* rapid micro-stutters */
+  49% {
+    filter: brightness(3.7);
+  }
+
+  51% {
+    filter: brightness(0.9);
+  }
+
+  53% {
+    filter: brightness(3.4);
+  }
+
+  55% {
+    filter: brightness(0.5);
+  }
+
+  /* natural tungsten overshoot */
+  57% {
+    filter: brightness(4.3);
+  }
+
+  /* fading wobble before stabilization */
+  60% {
+    filter: brightness(1.4);
+  }
+
+  63% {
+    filter: brightness(3.9);
+  }
+
+  /* stabilize fully */
+  65%, 100% {
+    filter: brightness(4);
   }
 }

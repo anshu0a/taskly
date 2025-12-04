@@ -1,7 +1,7 @@
 import '../../cssFile/Profile-css/Icon.css'
 
-export default function ({ msg }) {
-    return (<div className={msg == "Share" ? 'outIcon isFlex' : 'outIcon extraCssIcon isFlex'}>
+export default function ({ msg, fn }) {
+    return (<div onClick={fn} className={msg == "Share" ? 'outIcon isFlex' : 'outIcon extraCssIcon isFlex'}>
         {msg == "Share" ?
             <svg className='whatisIcon' viewBox="0 0 192 192" fill="none">
                 <path strokeWidth="8" d="M108.92 70.323a35.784 36.301 0 1 1 25.311 61.978c-19.77 0-28.157-19.055-38.213-36.301C85.28 77.6 77.576 59.699 57.805 59.699a35.784 36.301 0 1 0 25.045 62.209" ></path>

@@ -1,11 +1,11 @@
-.overSwitch>.actContent>.top>.hometop {
+.hometop {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.overSwitch>.actContent>.top>.hometop {
+.hometop {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -13,7 +13,7 @@
     font-weight: 500;
 }
 
-.overSwitch>.actContent>.top>.hometop>p {
+.hometop>p {
     width: calc(100% - 50px);
     margin: 0;
     white-space: nowrap;
@@ -23,11 +23,11 @@
 
 }
 
-.overSwitch>.actContent>.top>.hometop>.topinfo {
+.hometop>.topinfo {
     width: calc(100% - 105px);
 }
 
-.overSwitch>.actContent>.top>.hometop>p>span {
+.hometop>p>span {
     font-size: 12px;
     color: rgba(0, 22, 41, 0.354);
     font-style: italic;

@@ -1,0 +1,77 @@
+.allinOneDares {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 1px;
+}
+
+.allinOneDares>.onedare {
+    transition: .2s ease;
+    max-width: 600px;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+
+
+}
+
+.allinOneDares>.onedare:hover {
+    background-color: rgba(0, 110, 255, 0.113);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.085);
+
+}
+
+.allinOneDares>.onedare>.dtl {
+    width: calc(100% - 45px);
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5px;
+
+}
+
+.allinOneDares>.onedare>.dtl>.ohtxt {
+    width: calc(100% - 45px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.allinOneDares>.onedare>.dtl>.icondare {
+    width: 40px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.allinOneDares>.onedare>.chk {
+    width: 43px;
+    aspect-ratio: 1/1;
+}
+
+.allinOneDares>.onedare>.chk>.chckit {
+    cursor: pointer;
+    transition: .2s ease;
+    width: 30px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    fill: rgb(182, 182, 182);
+}
+
+.allinOneDares>.onedare>.chk>.mrk {
+    fill: rgb(15, 180, 0) !important;
+}
+
+.allinOneDares>.onedare>.chk:hover>.chckit {
+    width: 39px;
+    fill: rgb(85, 85, 85);
+}
+
+.allinOneDares>.btndiiv {
+    margin-top: 20px;
+    min-height: 40px;
+    align-items: flex-start !important;
+}

@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react';
 import '../../cssFile/Challenges-css/AllFeed.css';
-import NoTask from '../Home/NoTask';
 import OneChallenge from './OneChallenge';
 
-export default function AllFeed() {
-
+export default function AllFeed({setData, dares, myFeed}) {
     const videoRefs = useRef([]);
     const playingRef = useRef(null);
     const timerRef = useRef(null);
@@ -106,8 +104,8 @@ export default function AllFeed() {
 
     return (
         <div className="allfeedd isFlex">
-            {[...Array(8)].map((_, i) => (
-                <OneChallenge key={i} ref={el => videoRefs.current[i] = el} />
+            {dares.map((oneDare, i) => (
+                <OneChallenge myFeed={myFeed} oneDare={oneDare} key={i} ref={el => videoRefs.current[i] = el} />
             ))}
         </div>
     );

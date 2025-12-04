@@ -15,7 +15,7 @@ export default function mytask({ isloading, data, setData, user }) {
                     Array.from({ length: 12 }, (_, i) => <Loader key={i} />)
                     :
                     data?.length == 0 ?
-                        <NoTask msg="Add your first task" typ='task'  />
+                        <NoTask msg="Add your first task" type='task' pic="1"  />
                         :
                         <>
                             {data.map((onedata, ind) => (

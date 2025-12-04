@@ -1,3 +1,9 @@
 .mainchallenges{
     background-color: antiquewhite;
 }
+
+.loaderatChaalengrs{
+flex-direction: row !important;
+gap:10px;
+flex-wrap: wrap;
+}

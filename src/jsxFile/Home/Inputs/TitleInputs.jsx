@@ -2,7 +2,7 @@ import '../../../cssFile/Home-css/AddingOneTask.css'
 import { useRef } from 'react'
 import TextField from '@mui/material/TextField';
 
-export default function titleInputs({ value, setvalue }) {
+export default function titleInputs({ value, setvalue, notTask }) {
     const checkingTimeout = useRef(null);
     function setTitle(e) {
         const { name, value: val } = e.target;
@@ -35,9 +35,8 @@ export default function titleInputs({ value, setvalue }) {
     }
 
     async function taskExist(value) {
-        console.log("hello to text check")
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/isTaskExist`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/isExist/${notTask ? "dare" : "task"}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -57,7 +56,7 @@ export default function titleInputs({ value, setvalue }) {
             } else {
                 setvalue((pre) => ({ ...pre, errorTitle: "Somthing went wrong try again." }))
             }
-            console.log("coming from  is task ; ", data)
+            console.log("data in check : " , data)
         } catch (err) {
             console.log(err.message || "error in is task exist.")
         }
@@ -72,9 +71,9 @@ export default function titleInputs({ value, setvalue }) {
                 value={value.title}
                 onChange={setTitle}
                 className="taskName"
-                label="Task name"
+                label={notTask ? "Dare name" : "Task name"}
                 variant="standard"
-                helperText={value.errorTitle || "Give a clear task name."}
+                helperText={value.errorTitle ||( notTask ? "Give a clear Dare name." : "Give a clear Task name.")}
                 error={value.errorTitle != ''}
                 sx={{
                     m: 1,
@@ -93,7 +92,7 @@ export default function titleInputs({ value, setvalue }) {
                 className="purpusInp"
                 label="Purpose"
                 variant="standard"
-                helperText={value.errorPurpose || "Why this task matters ?"}
+                helperText={value.errorPurpose ||( notTask ? "Why this dare matters ?" : "Why this task matters ?")}
                 error={value.errorPurpose != ''}
                 sx={{
                     m: 1,

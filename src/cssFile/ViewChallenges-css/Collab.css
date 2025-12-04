@@ -1,0 +1,89 @@
+.collabus {
+    width: 100%;
+    padding: 10px 10px 10px 0;
+    box-sizing: border-box;
+    justify-content: space-between !important;
+    flex-direction: row !important;
+    gap: 5px;
+}
+
+
+
+.collabus>.prt1 {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    width: calc(100% - 85px);
+    overflow-X: scroll;
+    overflow-Y: hidden;
+}
+
+.collabus>.prt1::-webkit-scrollbar {
+    display: none;
+}
+
+.collabus>.prt1>.outpiccolab {
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.collabus>.prt1>.outpiccolab>.piccolab {
+    transition: .2s ease;
+    box-sizing: border-box;
+    border: 1px solid rgba(181, 181, 181, 0.134);
+    width: 45px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.collabus>.prt1>.outpiccolab:hover>.piccolab {
+    width: 49px;
+    z-index: 1;
+
+}
+
+.collabus>.prt2 {
+    width: 80px;
+}
+
+.collabus>.prt2>.grabBtn {
+    cursor: pointer;
+    transition: .2s ease;
+    flex-direction: row !important;
+    gap: 3px;
+    font-size: 13px;
+    max-width: 100%;
+    background-color: rgb(0, 158, 8);
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 500;
+    animation: shine 2s infinite ease-in-out;
+}
+
+@keyframes shine {
+ 0%, 100% {
+    background-color: #000000; /* black */
+    box-shadow: 0 0 5px #222, 0 0 10px #222; /* subtle glow */
+  }
+  50% {
+    background-color: #4d4d4d; /* slightly lighter black */
+    box-shadow: 0 0 15px rgb(174, 174, 174), 0 0 10px #555; /* stronger glow */
+  }
+}
+
+.collabus>.prt2>.grabBtn:hover {
+    border-radius: 20px;
+    background-color: rgb(0, 203, 0) !important;
+     box-shadow: 0 0 15px rgb(128, 128, 128), 0 0 10px #04ff00 !important; 
+}
+
+.collabus>.prt2>.grabBtn>svg {
+    width: 25px;
+    fill: white;
+    aspect-ratio: 1/1;
+}

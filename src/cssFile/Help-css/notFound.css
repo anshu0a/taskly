@@ -22,7 +22,7 @@ max-width: 900px;
 
 .nofound404>.inami>.btnloc404{
     flex-direction: row !important;
-    gap:5px;
+    gap:20px;
 }
 .nofound404>.inami>.btnloc404>div{
     cursor: pointer;
@@ -30,7 +30,7 @@ max-width: 900px;
     color:rgb(255, 255, 255);
     padding:7px 15px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 16px;
 }
 .nofound404>.inami>.btnloc404>div:hover{
     opacity: .7;
