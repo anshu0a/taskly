@@ -4,8 +4,7 @@ import { useState } from 'react';
 import Social from './Social'
 import DownPart from './DownPart'
 import Streek from './Streek'
-import Formateink from '../Help/FormatedHours'
-
+import formatedINk from '../Help/returnINm'
 export default function ({ person, setLink, link }) {
     const [random, setRandom] = useState({ forcover: Math.floor(Math.random() * 8), forpic: Math.floor(Math.random() * 27) });
 
@@ -30,7 +29,7 @@ export default function ({ person, setLink, link }) {
                         {person.id === person.iAm && <Social setLink={setLink} data={{ type: "add" }} />}
                     </div>
                 }
-                <Streek typ={true} streek={Formateink(person.merit)} />
+                <Streek typ={true} streek={formatedINk(person.merit )} />
             </div>
             <p className='bioInProfile'>{person.bio}</p>
             <DownPart person={person}/>

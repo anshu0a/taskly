@@ -18,7 +18,7 @@ export default function Junction() {
       <Route path="global" element={<Home myFeed={false} />} />
       <Route path="add-task" element={<AddingOneTask />} />
       <Route path="task/:taskId" element={<ViewTaskId />} />
-      <Route path="timers" element={<Devlopment />} />
+      <Route path="search" element={<Devlopment />} />
       <Route path="challenges/private" element={<Challenges myFeed={true}/>} />
       <Route path="challenges/global" element={<Challenges myFeed={false}/>} />
       <Route path="create_challenges" element={<CreateChallenges />} />

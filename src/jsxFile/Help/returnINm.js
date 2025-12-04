@@ -4,16 +4,25 @@
 // formateink(1500000)   // "1.5m"
 // formateink(2500000000)// "2.5b"
 
-export default function formateink(num) {
-  if (num < 1000) return String(Math.round(num));
+export default function (num) {
+    console.log(num)
 
-  const units = ["", "k", "m", "b", "t"];
-  let i = 0;
+    if (!num || isNaN(num)) return "0";
 
-  while (num >= 1000 && i < units.length - 1) {
-    num /= 1000;
-    i++;
-  }
+    // Round the number first to avoid floating-point errors
+    num = Math.round(num * 100) / 100;
 
-  return num.toFixed(2).replace(/\.00$/, '') + units[i];
+    if (num < 1000) return num.toString();
+
+    const units = ["", "k", "m", "b", "t"];
+    let i = 0;
+    let value = num;
+
+    while (value >= 1000 && i < units.length - 1) {
+        value /= 1000;
+        i++;
+    }
+
+    return value.toFixed(2).replace(/\.00$/, '') + units[i];
 }
+

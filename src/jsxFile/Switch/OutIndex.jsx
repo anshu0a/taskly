@@ -6,7 +6,7 @@ export default function outIndex() {
     return (
         <div className="outIndex">
             <Index name="Tasks" />
-            <Index name="Timers" />
+            <Index name="Search" />
             <Index name="Challenges" />
             <Index name="Settings" />
 
