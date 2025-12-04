@@ -71,9 +71,9 @@ export default function titleInputs({ value, setvalue, notTask }) {
                 value={value.title}
                 onChange={setTitle}
                 className="taskName"
-                label={notTask ? "Dare name" : "Task name"}
+                label={notTask ? "Dare title" : "Task name"}
                 variant="standard"
-                helperText={value.errorTitle ||( notTask ? "Give a clear Dare name." : "Give a clear Task name.")}
+                helperText={value.errorTitle ||( notTask ? "Give a clear Dare title." : "Give a clear Task name.")}
                 error={value.errorTitle != ''}
                 sx={{
                     m: 1,

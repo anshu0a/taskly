@@ -59,8 +59,7 @@ export default function allaDareTask({ value, setvalue }) {
                         className="darename"
                         label="Dare name"
                         variant="standard"
-                        helperText={value.errorTitle || "Add your Dare name."}
-                        error={value.errorTitle != ''}
+                        helperText={ "Add your Dare name."}
                         sx={{
                             m: 1,
                             width: "40ch",
