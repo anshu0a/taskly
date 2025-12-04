@@ -1,8 +1,10 @@
 import '../../cssFile/Profile-css/CardProfile.css'
 import { useState } from 'react';
+
 import Social from './Social'
 import DownPart from './DownPart'
 import Streek from './Streek'
+import Formateink from '../Help/FormatedHours'
 
 export default function ({ person, setLink, link }) {
     const [random, setRandom] = useState({ forcover: Math.floor(Math.random() * 8), forpic: Math.floor(Math.random() * 27) });
@@ -22,13 +24,13 @@ export default function ({ person, setLink, link }) {
                 {(link.links.length !== 0 || person.id === person.iAm) &&
 
                     <div className="socialDiv isFlex">
-                        {link.links?.slice(0, 4).map((one, i) => (
+                        {link.links?.slice(0, 4).map((one, i) => ( 
                             <Social data={one} key={i} />
                         ))}
                         {person.id === person.iAm && <Social setLink={setLink} data={{ type: "add" }} />}
                     </div>
                 }
-                <Streek typ={true} streek={person.merit} />
+                <Streek typ={true} streek={Formateink(person.merit)} />
             </div>
             <p className='bioInProfile'>{person.bio}</p>
             <DownPart person={person}/>

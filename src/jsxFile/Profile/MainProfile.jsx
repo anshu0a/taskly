@@ -38,7 +38,6 @@ export default function ({ }) {
                     window.location.href = "/login";
                 }
                 if (!data.error) {
-                    console.log(data)
                     setUserData((pre) => ({ ...pre, sts: "found", person: data.person }));
                     setLink((pre) => ({ ...pre, links: data.person.links }))
                 } else {

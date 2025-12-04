@@ -33,9 +33,7 @@ export default function outHome({ myFeed }) {
                 if (!data.error) {
                     setData(data.data);
                     setUser(data.user);
-                    console.log(data.data)
                     setIsloading((pre) => ({ ...pre, is: false }));
-                    console.log("Data from server in home coming");
                 } else {
                     setIsloading((pre) => ({ ...pre, msg: data.message + ' %-+% ' + Date.now() + Date.now() }));
                 }

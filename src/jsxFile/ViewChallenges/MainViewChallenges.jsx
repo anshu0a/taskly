@@ -52,7 +52,6 @@ export default function () {
                     return;
                 }
 
-                console.log(resData)
                 if (!resData.error) {
                     if (type === "personal") {
                         setData({ msg: "", loading: false, dare: resData.dare.dare, allThings: resData.dare });
