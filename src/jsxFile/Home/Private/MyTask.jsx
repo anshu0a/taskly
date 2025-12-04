@@ -6,6 +6,7 @@ import Loader from './Loader'
 import QuickMsg from '../../Help/NewQuick'
 import { useState } from 'react'
 export default function mytask({ isloading, data, setData, user }) {
+
     const [msg, setMsg] = useState({ msg: "" });
     return (
         <div className="mytask">

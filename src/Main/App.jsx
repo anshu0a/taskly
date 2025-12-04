@@ -1,15 +1,21 @@
 import { useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 import Switch from "../jsxFile/Switch/OverSwitch";
 import Login from '../jsxFile/Login/MainLogin';
 import Create from '../jsxFile/Create/MainCreate';
-import NotFound from '../jsxFile/Help/notFound'
+import NotFound from '../jsxFile/Help/notFound';
 
 export default function App() {
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
 
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     <Routes>

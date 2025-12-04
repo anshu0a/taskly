@@ -99,6 +99,7 @@
 }
 
 .mytask>.outonetask>.userdata>.outuserimg>.ownerpicinprivate {
+    cursor: pointer;
     width: 38px;
     aspect-ratio: 1/1 !important;
     border-radius: 50%;

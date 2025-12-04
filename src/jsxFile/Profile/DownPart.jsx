@@ -44,8 +44,8 @@ export default function ({ person }) {
     }
     return (
         <div className='downPart isFlex'>
-            <OutBox msg="Tasks" cnt={person.tasks} />
-            <OutBox msg="Dares" cnt={person.dares} />
+            <OutBox fn={()=>window.location.href = `/taskly/private`} msg="Tasks" cnt={person.tasks} />
+            <OutBox fn={()=>window.location.href = `/taskly/challenges/private`} msg="Dares" cnt={person.dares} />
             {person.iAm == person.id ?
                 <OutBox msg="Friends" cnt={person.friends} />
                 :

@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 
 export default function onetask({ type, data, user, setData, setMsg }) {
+   
     const location = useLocation();
     const [error, setError] = useState(false);
     const [isverify, setIsverify] = useState(false)
@@ -60,6 +61,7 @@ export default function onetask({ type, data, user, setData, setMsg }) {
                 <div className="outuserimg">
                     {!error ?
                         <img
+                            onClick={()=>window.location.href = `/taskly/profile/${data.owner.name}`}
                             className="ownerpicinprivate"
                             src={data.owner.pic || "jnj"}
                             onError={() => setError(true)}

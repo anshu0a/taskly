@@ -5,7 +5,6 @@
 // formateink(2500000000)// "2.5b"
 
 export default function (num) {
-    console.log(num)
 
     if (!num || isNaN(num)) return "0";
 

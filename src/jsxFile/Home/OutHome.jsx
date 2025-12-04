@@ -10,6 +10,7 @@ import FrndTask from './Public/FrndTask'
 export default function outHome({ myFeed }) {
     const [isLoading, setIsloading] = useState({ is: false, msg: "" });
     const [data, setData] = useState([]);
+   
     const [user, setUser] = useState(null)
     useEffect(() => {
         async function userRegister() {
