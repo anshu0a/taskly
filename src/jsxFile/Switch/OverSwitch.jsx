@@ -1,5 +1,7 @@
 import '../../cssFile/Switch-css/OverSwitch.css'
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 import OutIndex from './OutIndex'
 import { jwtDecode } from 'jwt-decode';
 import Index from './Index';
@@ -9,12 +11,20 @@ import Loading from './Loading'
 
 
 export default function overSwitch() {
+    const navigate = useNavigate();
     const [myData, setMyData] = useState({ loading2: false, loading: false, msg: "", })
 
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+
+        if (!token) {
+            navigate("/login");
+        }
+    }, []);
 
     useEffect(() => {
         setTimeout(() => {
-            setMyData(pre => ({ ...pre, loading2:true }));
+            setMyData(pre => ({ ...pre, loading2: true }));
         }, 200);
         if (sessionStorage.getItem("status") != "allreadyIn") {
             sessionStorage.setItem("status", "allreadyIn");
