@@ -15,7 +15,7 @@ const OneChallenge = forwardRef((props, ref) => {
             ></video>
             <div className='borderis isFlex'>
                 <p className="title76">{oneDare.title}</p>
-                <p className="purpuse76">{oneDare.purpose} {oneDare.purpose}</p>
+                <p className="purpuse76">{oneDare.purpose}</p>
                 {(Date.now() - new Date(oneDare.createdAt).getTime() >= 1) && 
                 <div className="neworedit">New</div>}
 
